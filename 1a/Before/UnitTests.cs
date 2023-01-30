@@ -36,7 +36,7 @@ namespace OOP_Lab_1
             fillList(500);
             try
             {
-                SubscribeSortMethod(foo);
+                subscribeSortMethod(foo);
             }
             catch (Exception)
             {
@@ -48,7 +48,7 @@ namespace OOP_Lab_1
             statusMessages[it] = sortMethod + " is fine";
             it++;
         }
-        static void SubscribeSortMethod(SortMethod<int> foo)
+        static void subscribeSortMethod(SortMethod<int> foo)
         {
 
             //throw new Exception(statusMessages[it]);

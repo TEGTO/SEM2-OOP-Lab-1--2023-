@@ -75,7 +75,7 @@
 
 
 
-        <Button Content="Calculation" HorizontalAlignment="Left" Margin="73,103,0,0" VerticalAlignment="Top" Height="29" Width="91" Click="Button_Click" Grid.ColumnSpan="2" FontWeight="Bold"/>
+        <Button Content="Calculation" HorizontalAlignment="Left" Margin="73,103,0,0" VerticalAlignment="Top" Height="29" Width="91" Click="Button_Calculations" Grid.ColumnSpan="2" FontWeight="Bold"/>
 
 
     </Grid>

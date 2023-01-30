@@ -304,7 +304,7 @@ namespace OOP_Lab_1
             BDAngle_Rectangle.Text= "??";
 
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Calculations(object sender, RoutedEventArgs e)
         {
            
         
