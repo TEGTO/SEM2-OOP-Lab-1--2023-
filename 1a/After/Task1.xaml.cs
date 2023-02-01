@@ -115,21 +115,8 @@ namespace OOP_Lab_1
 
         private void Button_UnitTest(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                UnitTestsSortingMethods.unitTestStart();
-            }
-            catch (Exception ex)
-            {
-                resultTextBox.Text = ex.Message + "\n";
-
-
-            }
-            resultTextBox.Text += $"{UnitTestsSortingMethods.statusMessages[7]}";
-            for (int i = 0; i < 7; i++)
-            {
-                resultTextBox.Text += $"\n{UnitTestsSortingMethods.statusMessages[i]}";
-            }
+            UnitTests UnitTests = new UnitTests();
+            UnitTests.Show();
         }
     }
 }

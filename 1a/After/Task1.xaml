@@ -30,8 +30,8 @@
 
         <Button Content="Task2" HorizontalAlignment="Left" Margin="581,66,0,0" VerticalAlignment="Top" Height="64" Width="124" Background="#FFF72121" Foreground="White" BorderBrush="Black" Click="Button_OpenTask2" FontFamily="Arial Black" Grid.Column="1"/>
 
-        <TextBox x:Name="textBox" Grid.Column="1" HorizontalAlignment="Left" Margin="158,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="360" Height="112" Background="#FFEAEAEA" ScrollViewer.CanContentScroll="True" VerticalScrollBarVisibility="Visible" IsReadOnly="True" FontWeight="Bold" FontFamily="Arial"/>
-        <TextBox x:Name="resultTextBox"  Grid.Column="1" HorizontalAlignment="Left" Margin="158,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="360" Height="96" ScrollViewer.CanContentScroll="True" VerticalScrollBarVisibility="Visible" IsReadOnly="True" FontWeight="Bold" FontSize="15" FontFamily="Arial" Background="{x:Null}" />
+        <TextBox x:Name="textBox" Grid.Column="1" HorizontalAlignment="Left" Margin="158,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="360" Height="124" Background="#FFEAEAEA" ScrollViewer.CanContentScroll="True" VerticalScrollBarVisibility="Visible" IsReadOnly="True" FontWeight="Bold" FontFamily="Arial"/>
+      
 
 
 
