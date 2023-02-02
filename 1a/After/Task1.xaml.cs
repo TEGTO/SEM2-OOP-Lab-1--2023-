@@ -115,7 +115,7 @@ namespace OOP_Lab_1
 
         private void Button_UnitTest(object sender, RoutedEventArgs e)
         {
-            UnitTests UnitTests = new UnitTests();
+            UnitTest UnitTests = new UnitTest();
             UnitTests.Show();
         }
     }

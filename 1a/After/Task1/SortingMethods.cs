@@ -1,13 +1,14 @@
 ﻿using OOP_Lab_1;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 interface ISortMethod<T> where T : IComparable
 {
     public void Sort(object source, SortingEventArgs<T> arg);
 }
 
-class Insertion<T> : ISortMethod<T> where T: IComparable
+public class Insertion<T> : ISortMethod<T> where T: IComparable
 {
       void Sorting(MyList<T> arr)
     {
@@ -35,7 +36,7 @@ class Insertion<T> : ISortMethod<T> where T: IComparable
     }
 
 }
-class QuickSort<T> : ISortMethod<T> where T : IComparable
+public class QuickSort<T> : ISortMethod<T> where T : IComparable
 {
 
  
@@ -83,7 +84,7 @@ class QuickSort<T> : ISortMethod<T> where T : IComparable
 }
 
 
-class MergeSort<T> : ISortMethod<T> where T : IComparable
+public class MergeSort<T> : ISortMethod<T> where T : IComparable
 {
     void Merge(MyList<T> arr, int l, int m, int r)
     {
@@ -148,7 +149,7 @@ class MergeSort<T> : ISortMethod<T> where T : IComparable
 }
 
 
-class BubbleSort<T> : ISortMethod<T> where T : IComparable
+public class BubbleSort<T> : ISortMethod<T> where T : IComparable
 {
      void bubbleSort(MyList<T> arr)
     {
@@ -172,7 +173,7 @@ class BubbleSort<T> : ISortMethod<T> where T : IComparable
 }
 
 
-class SelectionSort<T> : ISortMethod<T> where T : IComparable
+public class SelectionSort<T> : ISortMethod<T> where T : IComparable
 {
      void Sorting(MyList<T> arr)
     {
@@ -203,35 +204,68 @@ class SelectionSort<T> : ISortMethod<T> where T : IComparable
 
 
 
-class CountingSort<T> : ISortMethod<T> where T : IComparable
+public class CountingSort<T> : ISortMethod<T> where T : IComparable
 {
-
-     void Sorting(MyList<T> arr)
+     T FindMax(MyList<T> arr)
     {
-        int n = arr.length;
-
-
-        T[] output = new T[n];
-
-        int [] count = new int[256] ;
-
-
-        for (int i = 0; i < n; ++i)
-            ++count[(int)Convert.ChangeType(arr[i], typeof(T))];
-
-        for (int i = 1; i <= 255; ++i)
-            count[i] += count[i - 1];
-
-
-        for (int i = n - 1; i >= 0; i--)
+        if (arr.length == 0)
         {
-            output[count[(int)Convert.ChangeType(arr[i], typeof(T))] - 1] = arr[i];
-            --count[(int)Convert.ChangeType(arr[i], typeof(T))];
+            throw new Exception("Array is empty");
+        }
+        var maxVal = arr[0];
+        for (int i = 1; i < arr.length; i++)
+            if (arr[i].CompareTo(maxVal) >0)
+                maxVal = arr[i];
+        return maxVal;
+    }
+      int FindMin(MyList<T> arr)
+    {
+        if (arr.length == 0)
+        {
+            throw new Exception("Array is empty");
         }
 
+        int min = int.MaxValue;
+        foreach (var i in arr)
+        {
+            if (i.CompareTo(min) < 0)
+            {
+                min =Convert.ToInt32(i);
+            }
+        }
+        return min;
+    }
 
-        for (int i = 0; i < n; ++i)
-            arr[i] = output[i];
+  
+    void Sorting(MyList<T> arr)
+    {
+        if (typeof(T) != typeof(int))
+        {
+            throw new NotSupportedException();
+        }
+    
+        int max = Convert.ToInt32(FindMax(arr));
+        int min = Convert.ToInt32(FindMin(arr));
+        int range = max - min + 1;
+        int[] count = new int[range];
+        T[] output = new T[arr.length];
+        for (int i = 0; i < arr.length; i++)
+        {
+            count[Convert.ToInt32(arr[i]) - min]++;
+        }
+        for (int i = 1; i < count.Length; i++)
+        {
+            count[i] += count[i - 1];
+        }
+        for (int i = arr.length - 1; i >= 0; i--)
+        {
+            output[count[Convert.ToInt32(arr[i]) - min] - 1] =arr[i];
+            count[Convert.ToInt32(arr[i]) - min]--;
+        }
+        for (int i = 0; i < arr.length; i++)
+        {
+            arr[i] =output[i];
+        }
     }
     public void Sort(object source, SortingEventArgs<T> arg)
     {
@@ -241,7 +275,7 @@ class CountingSort<T> : ISortMethod<T> where T : IComparable
    
 }
 
-class BucketSort<T> : ISortMethod<T> where T : IComparable
+public class BucketSort<T> : ISortMethod<T> where T : IComparable
 {
      void Sorting(MyList<T> arr)
     {

@@ -115,7 +115,30 @@ namespace OOP_Lab_1
             }
             length++;
         }
+        public override bool Equals(object obj)
+        {
+            var otherList = obj as MyList<T>;
 
+            if (otherList == null)
+                return false;
+
+            if (otherList.length != length)
+                return false;
+
+            Node? currentThis = head;
+            Node? currentOther = otherList.head;
+            while (currentThis != null)
+            {
+                if (currentThis.data.CompareTo(currentOther.data) != 0)
+                {
+                    return false;
+                }
+                currentThis = currentThis.next;
+                currentOther = currentOther.next;
+            }
+
+            return true;
+        }
         public IEnumerator<T> GetEnumerator()
         {
             Node? current = head;

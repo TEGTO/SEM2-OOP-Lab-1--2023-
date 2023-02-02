@@ -8,7 +8,7 @@ public class SortingEventArgs<T> : EventArgs where T : IComparable
 }
 public  class SortEventHandler<T> where T : IComparable
 {
-    
+     
         public event EventHandler<SortingEventArgs<T>> sortMethod;
         public void Sort(MyList <T> list)
         {

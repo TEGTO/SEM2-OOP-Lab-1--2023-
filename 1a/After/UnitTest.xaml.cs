@@ -17,9 +17,9 @@ namespace OOP_Lab_1
     /// <summary>
     /// Interaction logic for UnitTests.xaml
     /// </summary>
-    public partial class UnitTests : Window
+    public partial class UnitTest : Window
     {
-        public UnitTests()
+        public UnitTest()
         {
             InitializeComponent();
         }
