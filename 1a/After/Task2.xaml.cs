@@ -68,7 +68,7 @@ namespace OOP_Lab_1
                         Pentagon.side = Convert.ToSingle(pentagonTextBox_Side.Text);
                         break;
                     case (int)ComboBoxFiguresIndex.Circle:
-                        Circle.Radius = Convert.ToSingle(circleTextBox_Radius.Text);
+                        Circle.radius = Convert.ToSingle(circleTextBox_Radius.Text);
                         break;
                     default:
                         break;
@@ -212,7 +212,9 @@ namespace OOP_Lab_1
                             break;
                         case (int)TriangleTypes.Right:
                             triangleTextBox_FirstAngle.Text = "90";
-                            triangleTextBox_FirstAngle.IsReadOnly = true;
+                            triangleTextBox_FirstAngle.IsReadOnly = true; 
+                            triangleTextBox_SecondAngle.Text = "90";
+                            triangleTextBox_SecondAngle.IsReadOnly = true;
                             break;
                         default:
                             break;

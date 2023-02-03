@@ -25,7 +25,7 @@
                 " Width="107" Click="Button_ShuffleList" Grid.Column="1" FontWeight="Bold"/>
             <Button Content="Counting Sort" HorizontalAlignment="Left" Margin="255,319,0,0" VerticalAlignment="Top" Width="95" Height="26" Click="Button_CountingSort" Grid.Column="1" FontWeight="Bold"/>
             <Button Content="Bucket Sort" HorizontalAlignment="Left" Margin="375,319,0,0" VerticalAlignment="Top" Width="95" RenderTransformOrigin="0.458,0.558" Height="26" Click="Button_BucketSort" Grid.Column="1" FontWeight="Bold"/>
-            <Button Content="Unit Test" HorizontalAlignment="Left" Margin="648,153,0,0" VerticalAlignment="Top" Width="111" RenderTransformOrigin="0.458,0.558" Height="41" Click="Button_UnitTest" FontSize="20" FontWeight="Bold"/>
+           
         </Grid>
 
         <Button Content="Task2" HorizontalAlignment="Left" Margin="581,66,0,0" VerticalAlignment="Top" Height="64" Width="124" Background="#FFF72121" Foreground="White" BorderBrush="Black" Click="Button_OpenTask2" FontFamily="Arial Black" Grid.Column="1"/>

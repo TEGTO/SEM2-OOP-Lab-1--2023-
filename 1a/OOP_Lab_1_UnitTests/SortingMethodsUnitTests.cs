@@ -1,6 +1,6 @@
 using OOP_Lab_1;
 
-namespace OOP_Lab_1_UnitTests
+namespace SortingMethodsUnitTests
 {
     public class InsertionTests
     {

@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace OOP_Lab_1
 {
-    enum TriangleTypes
+    public enum TriangleTypes
     {
         InvalidType = -1,
         Scalene = 0,
@@ -13,7 +13,7 @@ namespace OOP_Lab_1
 
 
     }
-    static class Triangle
+    public static class Triangle
     {
 
 
@@ -23,13 +23,24 @@ namespace OOP_Lab_1
         static public float firstAngle { get; set; } = 0;
         static public float secondAngle { get; set; } = 0;
         static public float thirdAngle { get; set; } = 0;
-        static public float Perimeter() => DefineType() == (int)TriangleTypes.InvalidType ? 0 : (float)(sirstSide + secondSide + thirdSide);
+        static public float Perimeter()
+        {
+            if (DefineType() == (int)TriangleTypes.InvalidType)
+            {
+                throw new Exception();
+            }
+            return (float)(sirstSide + secondSide + thirdSide);
+        }
         static public float Area()
         {
 
             double halfP = (sirstSide + secondSide + thirdSide) / 2;
             double area = Math.Sqrt(halfP * (halfP - sirstSide) * (halfP - secondSide) * (halfP - thirdSide));
-            return DefineType() == -1 ? 0 : (float)area;
+            if (DefineType() == (int)TriangleTypes.InvalidType)
+            {
+                throw new Exception();
+            }
+            return (float)area;
         }
 
         static public int DefineType()
@@ -79,7 +90,7 @@ namespace OOP_Lab_1
 
 
 
-    enum QuadrilateralTypes
+    public enum QuadrilateralTypes
     {
         InvalidType = -1,
         FreeQuadrilateral,
@@ -93,7 +104,7 @@ namespace OOP_Lab_1
 
     }
 
-    static class Quadrilateral
+    public static class Quadrilateral
     {
         static public float firstSide { get; set; } = 0;
         static public float secondSide { get; set; } = 0;
@@ -103,7 +114,16 @@ namespace OOP_Lab_1
         static public float secondAngle { get; set; } = 0;
         static public float thirdAngle { get; set; } = 0;
         static public float fourthAngle { get; set; } = 0;
-        static public float Perimeter() => DefineType() == (int)QuadrilateralTypes.InvalidType ? 0 : (float)(firstSide + secondSide + thirdSide + fourthSide);
+        static public float Perimeter()
+        {
+
+            if (DefineType() == (int)QuadrilateralTypes.InvalidType)
+            {
+                throw new Exception();
+            }
+            return (float)(firstSide + secondSide + thirdSide + fourthSide);
+
+        }
         static public int DefineType()
         {
             double[] sides = new double[4] { firstSide, secondSide, thirdSide, fourthSide };
@@ -130,12 +150,13 @@ namespace OOP_Lab_1
                             return (int)QuadrilateralTypes.Square;
                     if (angles.Length == 2)
                     {
-                        if (firstAngle != thirdAngle) return (int)QuadrilateralTypes.InvalidType;
+
                         double alphaAngle = angles[0] < angles[1] ? angles[0] : angles[1];//alpha is acute 
 
-                        firstDiagonal = 2 * sides[0] * Math.Cos(Math.PI / 180 * (alphaAngle / 2));
-                        secondDiagonal = 2 * sides[0] * Math.Sin(Math.PI / 180 * (alphaAngle / 2));
-                        if (4 * Math.Pow(sides[0], 2) == Math.Pow(firstDiagonal, 2) + Math.Pow(secondDiagonal, 2))
+                        firstDiagonal = sides[0] * Math.Sqrt(2 + 2 * Math.Cos(Math.PI / 180 * alphaAngle));
+                        secondDiagonal = sides[0] * Math.Sqrt(2 - 2 * Math.Cos(Math.PI / 180 * alphaAngle));
+                        float buffer = (float)(Math.Pow(firstDiagonal, 2) + Math.Pow(secondDiagonal, 2));
+                        if (4 * Math.Pow(sides[0], 2) == buffer)
                             return (int)QuadrilateralTypes.Rhombus;
 
                     }
@@ -146,19 +167,26 @@ namespace OOP_Lab_1
                             return (int)QuadrilateralTypes.Rectangle;
                     if (angles.Length == 2)
                     {
-                        if (firstAngle != thirdAngle || firstSide != secondSide || thirdSide != fourthSide) return (int)QuadrilateralTypes.InvalidType;
-                        return (int)QuadrilateralTypes.Parallelogram;
+
+                        firstDiagonal = Math.Sqrt(sides[0] * sides[0] + sides[1] * sides[1] + 2 * sides[0] * sides[1] * Math.Cos(Math.PI / 180 * angles[0]));
+                        secondDiagonal = Math.Sqrt(sides[0] * sides[0] + sides[1] * sides[1] - 2 * sides[0] * sides[1] * Math.Cos(Math.PI / 180 * angles[0]));
+                        float buffer = (float)(Math.Pow(firstDiagonal, 2) + Math.Pow(secondDiagonal, 2));
+                        if (buffer == 2 * (sides[0] * sides[0] + sides[1] * sides[1]))
+                        {
+                            return (int)QuadrilateralTypes.Parallelogram;
+                        }
+
                     }
                     break;
                 default:
-                    double biggestBase = firstSide > secondSide ? firstSide : secondSide;
-                    double smallestBase = biggestBase == firstSide ? secondSide : firstSide;
-                    firstDiagonal = Math.Sqrt(smallestBase * biggestBase + fourthSide * fourthSide + (biggestBase * (thirdSide * thirdSide - fourthSide * fourthSide)) / (biggestBase - smallestBase));
-                    secondDiagonal = Math.Sqrt(smallestBase * biggestBase + thirdSide * thirdSide - (biggestBase * (thirdSide * thirdSide - fourthSide * fourthSide)) / (biggestBase - smallestBase));
+                    double biggestBase = fourthSide > secondSide ? fourthSide : secondSide;
+                    double smallestBase = biggestBase == fourthSide ? secondSide : fourthSide;
+                    firstDiagonal = (float)Math.Sqrt(firstSide * firstSide + biggestBase * smallestBase - (biggestBase * (firstSide * firstSide - thirdSide * thirdSide)) / (biggestBase - smallestBase));
+                    secondDiagonal = (float)Math.Sqrt(thirdSide * thirdSide + biggestBase * smallestBase - (biggestBase * (thirdSide * thirdSide - firstSide * firstSide)) / (biggestBase - smallestBase));
                     if (angles.Length == 2)
                         if (sides.Length != 3)
                             return (int)QuadrilateralTypes.InvalidType;
-                    if (firstDiagonal * firstDiagonal + secondDiagonal * secondDiagonal == 2 * firstSide * secondSide + thirdSide * thirdSide + fourthSide * fourthSide)
+                    if (firstDiagonal * firstDiagonal + secondDiagonal * secondDiagonal == 2 * fourthSide * secondSide + thirdSide * thirdSide + firstSide * firstSide)
                     {
                         if (angles.Length == 2)
                             if (sides.Length == 3)
@@ -178,36 +206,48 @@ namespace OOP_Lab_1
         }
         static public float Area()
         {
+            
             double[] sides = new double[4] { firstSide, secondSide, thirdSide, fourthSide };
             double[] angles = new double[4] { firstAngle, thirdAngle, secondAngle, fourthAngle };
             angles = angles.Distinct().ToArray();
             sides = sides.Distinct().ToArray();
-            double firstDiagonal, secondDiagonal;
+            double firstDiagonal, secondDiagonal, S;
             switch (DefineType())
             {
                 case (int)QuadrilateralTypes.Rectangle:
-                    return (float)(sides[0] * sides[1]);
+                    S = (sides[0] * sides[1]);
+                    return (float)S;
                 case (int)QuadrilateralTypes.Square:
-                    return (float)(sides[0] * sides[0]);
+                    S = (sides[0] * sides[0]);
+                    return (float)S;
                 case (int)QuadrilateralTypes.Rhombus:
                     double alphaAngle = angles[0] < angles[1] ? angles[0] : angles[1];//alpha is acute 
-                    firstDiagonal = 2 * sides[0] * Math.Cos(Math.PI / 180 * (alphaAngle / 2));
-                    secondDiagonal = 2 * sides[0] * Math.Sin(Math.PI / 180 * (alphaAngle / 2));
-                    return (float)((firstDiagonal * secondDiagonal) / 2);
+
+                    firstDiagonal = sides[0] * Math.Sqrt(2 + 2 * Math.Cos(Math.PI / 180 * alphaAngle));
+                    secondDiagonal = sides[0] * Math.Sqrt(2 - 2 * Math.Cos(Math.PI / 180 * alphaAngle));
+                    S = ((firstDiagonal * secondDiagonal) / 2);
+                    return (float)S;
                 case (int)QuadrilateralTypes.Parallelogram:
-                    return (float)(secondSide * thirdSide * Math.Sin(Math.PI / 180 * firstAngle));
+                    S=(sides[0] * sides[1] * Math.Sin(Math.PI / 180 * angles[0]));
+                    return (float)S;
                 case (int)QuadrilateralTypes.Trapezoid:
                 case (int)QuadrilateralTypes.TrapezoidRight:
                 case (int)QuadrilateralTypes.TrapezoidIsosceles:
-                    double height = Math.Sqrt(thirdSide * thirdSide - (1 / 4) * Math.Pow((((thirdSide * thirdSide - fourthSide * fourthSide) / (secondSide - firstSide)) + secondSide - firstSide), 2));
-                    return (float)(((firstSide + secondSide) / 2) * height);
+                    double biggestBase = fourthSide > secondSide ? fourthSide : secondSide;
+                    double smallestBase = biggestBase == fourthSide ? secondSide : fourthSide;
+                    double h = firstSide * Math.Sin(Math.PI / 180 * firstAngle);
+                    S = ((biggestBase + smallestBase) /2)* h;
+                    return (float)S;
                 case (int)QuadrilateralTypes.FreeQuadrilateral:
                     //Quadrilateral area 
                     //p - HalfPerimeter,  delta - (∠Any + ∠TheOtherAny)/2
                     double p = (firstSide + secondSide + thirdSide + fourthSide) / 2;
                     double delta = (firstAngle + thirdAngle) / 2;
-                    double S = Math.Sqrt((p - firstSide) * (p - secondSide) * (p - thirdSide) * (p - fourthSide) - firstSide * secondSide * thirdSide * fourthSide * Math.Pow(Math.Cos(Math.PI / 180 * delta), 2));
+                     S = Math.Sqrt((p - firstSide) * (p - secondSide) * (p - thirdSide) * (p - fourthSide) - firstSide * secondSide * thirdSide * fourthSide * Math.Pow(Math.Cos(Math.PI / 180 * delta), 2));
                     return (float)S;
+                case (int)QuadrilateralTypes.InvalidType:
+                    throw new Exception();
+                    break;
                 default:
                     break;
             }
@@ -216,17 +256,41 @@ namespace OOP_Lab_1
     }
 
 
-    static class Pentagon
+    public static class Pentagon
     {
-        static public float side { get; set; } = 0;
-        static public float Perimeter() => (float)(5 * side);
-        static public float Area() => (float)((5 * Math.Pow(side, 2)) / (4 * Math.Tan(Math.PI / 180 * 36)));
+        static public float side { get; set; }
+        static public float Perimeter()
+        {
+            if (side==0|| side == float.NaN) 
+               throw new Exception();
+          
+            return (float)(5 * side);
+        }
+        static public float Area()
+        {
+            if (side == 0 ||side ==float.NaN)
+                throw new Exception();
+           
+            return  (float)((5 * Math.Pow(side, 2)) / (4 * Math.Tan(Math.PI / 180 * 36)));
+        }
+        
 
     }
-    static class Circle
+   public static class Circle
     {
-        static public float Radius { get; set; } = 0;
-        static public float Perimeter() => (float)(Math.PI * 2 * Radius);
-        static public float Area() => (float)(Math.PI * Math.Pow(Radius, 2));
+        static public float radius { get; set; }
+        static public float Perimeter()
+        {
+            if (radius == 0 || radius == float.NaN)
+                throw new Exception();
+            return (float)(Math.PI * 2 * radius); 
+        }
+
+        static public float Area()
+        {
+            if (radius == 0 || radius == float.NaN)
+                throw new Exception();
+            return (float)(Math.PI * Math.Pow(radius, 2));
+        }
     }
 }
