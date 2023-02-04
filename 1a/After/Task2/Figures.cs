@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Linq;
 
-namespace OOP_Lab_1
-{
-    public enum TriangleTypes
+/// <summary>
+/// **Enum of triangle types.**
+/// </summary>
+public enum TriangleTypes
     {
         InvalidType = -1,
         Scalene = 0,
@@ -13,6 +14,9 @@ namespace OOP_Lab_1
 
 
     }
+/// <summary>
+/// Static class that calculations Area, Perimeter and Triangle Type depending on values of sides and angles.
+/// </summary>
     public static class Triangle
     {
 
@@ -42,8 +46,11 @@ namespace OOP_Lab_1
             }
             return (float)area;
         }
-
-        static public int DefineType()
+    /// <summary>
+    /// **Defines triangle type.**
+    /// </summary>
+    /// <returns>Type of triangle in triangle enum.</returns>
+    static public int DefineType()
         {
             double[] sides = new double[3] { sirstSide, secondSide, thirdSide };
             double[] angles = new double[3] { firstAngle, thirdAngle, secondAngle };
@@ -89,8 +96,10 @@ namespace OOP_Lab_1
     }
 
 
-
-    public enum QuadrilateralTypes
+/// <summary>
+/// **Enum of quadrilateral types.**
+/// </summary>
+public enum QuadrilateralTypes
     {
         InvalidType = -1,
         FreeQuadrilateral,
@@ -103,8 +112,10 @@ namespace OOP_Lab_1
         TrapezoidIsosceles
 
     }
-
-    public static class Quadrilateral
+/// <summary>
+/// Static class that calculations Area, Perimeter and Quadrilateral Type depending on values of sides and angles.
+/// </summary>
+public static class Quadrilateral
     {
         static public float firstSide { get; set; } = 0;
         static public float secondSide { get; set; } = 0;
@@ -124,7 +135,11 @@ namespace OOP_Lab_1
             return (float)(firstSide + secondSide + thirdSide + fourthSide);
 
         }
-        static public int DefineType()
+    /// <summary>
+    /// **Defines quadrilateral type.**
+    /// </summary>
+    /// <returns>Type of quadrilateral in quadrilateral enum.</returns>
+    static public int DefineType()
         {
             double[] sides = new double[4] { firstSide, secondSide, thirdSide, fourthSide };
             double[] angles = new double[4] { firstAngle, thirdAngle, secondAngle, fourthAngle };
@@ -254,8 +269,10 @@ namespace OOP_Lab_1
         }
     }
 
-
-    public static class Pentagon
+/// <summary>
+/// Static class that calculations Area, Perimeter depending on value of the side.
+/// </summary>
+public static class Pentagon
     {
         static public float side { get; set; }
         static public float Perimeter()
@@ -275,7 +292,10 @@ namespace OOP_Lab_1
         
 
     }
-   public static class Circle
+/// <summary>
+/// Static class that calculations Area, Perimeter depending on value of the radius.
+/// </summary>
+public static class Circle
     {
         static public float radius { get; set; }
         static public float Perimeter()
@@ -292,4 +312,3 @@ namespace OOP_Lab_1
             return (float)(Math.PI * Math.Pow(radius, 2));
         }
     }
-}

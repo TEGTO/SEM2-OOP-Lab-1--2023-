@@ -6,12 +6,12 @@ namespace SortingMethodsUnitTests
     {
         private SortingEventArgs<double> actualList;
         private MyList<double> expectedResultList;
-        Insertion<double> insertionSort;
+        InsertionSort<double> insertionSort;
         [SetUp]
         public void Setup()
         {
             //Assign
-            insertionSort = new Insertion<double>();
+            insertionSort = new InsertionSort<double>();
             actualList = new SortingEventArgs<double>();
             actualList.myList = new MyList<double>();
             expectedResultList = new MyList<double>();
@@ -53,7 +53,7 @@ namespace SortingMethodsUnitTests
             //Assign
             SortingEventArgs<string> charActualList = new SortingEventArgs<string>();
             MyList<string> charExpectedResultList = new MyList<string>();
-            Insertion<string> charInsertionSort = new Insertion<string>();
+            InsertionSort<string> charInsertionSort = new InsertionSort<string>();
             charActualList.myList = new MyList<string>();
             charActualList.myList.AddHead("C");
             charActualList.myList.AddHead("B");

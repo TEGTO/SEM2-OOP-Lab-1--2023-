@@ -3,12 +3,20 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
+/// <summary>
+/// **Interface of all sort methods.**
+/// </summary>
+
 interface ISortMethod<T> where T : IComparable
 {
     public void Sort(object source, SortingEventArgs<T> arg);
 }
 
-public class Insertion<T> : ISortMethod<T> where T: IComparable
+/// <summary>
+/// Insertion sort class implements the interface. Contains insertion method for sorting.
+/// </summary>
+
+public class InsertionSort<T> : ISortMethod<T> where T: IComparable
 {
       void Sorting(MyList<T> arr)
     {
@@ -36,6 +44,9 @@ public class Insertion<T> : ISortMethod<T> where T: IComparable
     }
 
 }
+/// <summary>
+/// Quick sort class implements the interface. Contains quick method for sorting.
+/// </summary>
 public class QuickSort<T> : ISortMethod<T> where T : IComparable
 {
 
@@ -83,7 +94,9 @@ public class QuickSort<T> : ISortMethod<T> where T : IComparable
     }
 }
 
-
+/// <summary>
+/// Merge sort class implements the interface. Contains merge method for sorting.
+/// </summary>
 public class MergeSort<T> : ISortMethod<T> where T : IComparable
 {
     void Merge(MyList<T> arr, int l, int m, int r)
@@ -148,7 +161,9 @@ public class MergeSort<T> : ISortMethod<T> where T : IComparable
     }
 }
 
-
+/// <summary>
+/// Bubble sort class implements the interface. Contains bubble method for sorting.
+/// </summary>
 public class BubbleSort<T> : ISortMethod<T> where T : IComparable
 {
      void bubbleSort(MyList<T> arr)
@@ -172,7 +187,9 @@ public class BubbleSort<T> : ISortMethod<T> where T : IComparable
 
 }
 
-
+/// <summary>
+/// Selection sort class implements the interface. Contains selection method for sorting.
+/// </summary>
 public class SelectionSort<T> : ISortMethod<T> where T : IComparable
 {
      void Sorting(MyList<T> arr)
@@ -202,7 +219,9 @@ public class SelectionSort<T> : ISortMethod<T> where T : IComparable
 
 }
 
-
+/// <summary>
+/// Counting sort class implements the interface. Contains counting method for sorting.
+/// </summary>
 
 public class CountingSort<T> : ISortMethod<T> where T : IComparable
 {
@@ -274,6 +293,9 @@ public class CountingSort<T> : ISortMethod<T> where T : IComparable
     }
    
 }
+/// <summary>
+/// Bucket sort class implements the interface. Contains bucket method for sorting.
+/// </summary>
 
 public class BucketSort<T> : ISortMethod<T> where T : IComparable
 {

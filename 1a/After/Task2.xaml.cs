@@ -6,13 +6,15 @@ using System.Windows.Controls;
 namespace OOP_Lab_1
 {
     /// <summary>
-    /// Interaction logic for task2.xaml
+    /// Task2 class that contains tasks of part two of exercise. 
     /// </summary>
-
 
     public partial class Task2 : Window
     {
 
+        /// <summary>
+        ///  **Initialize UI and elements.**
+        /// </summary>
 
 
         public Task2()
@@ -23,6 +25,11 @@ namespace OOP_Lab_1
         }
         //Calculation
         //calculation button
+        /// <summary>
+        /// **Button method to start calculations.**
+        /// </summary>
+        /// <param name="sender">The element that called the method.</param>
+        /// <param name="e">Contains state information and event data associated with a routed event.</param>
         private void ButtonClick_Calculation(object sender, RoutedEventArgs e)
         {
             try
@@ -39,6 +46,10 @@ namespace OOP_Lab_1
 
         }
         //give values from textboxes to static classes
+        /// <summary>
+        ///**The method gives values from all textboxes to static class for calculations.**
+        /// </summary>
+
         public void GiveValuesToClasses()
         {
             try
@@ -84,6 +95,9 @@ namespace OOP_Lab_1
 
         }
         //perform calculations and fill in labels based on the results
+        /// <summary>
+        /// **The method fills labels with results of calculations.**
+        /// </summary>
         private void CalculationsFillLabels()
         {
             switch (figuresComboBox.SelectedIndex)
@@ -109,7 +123,11 @@ namespace OOP_Lab_1
             }
         }
 
-        //hide all figures canvases 
+        //hide all figures canvases
+        /// <summary>
+        /// **The method hides all canvases on stackPanel.**
+        /// </summary>
+
         private void HideAllCanvases(StackPanel stackPanel)
         {
             Canvas canvas;
@@ -124,11 +142,19 @@ namespace OOP_Lab_1
             }
         }
         //ComboBoxFunctions
+        /// <summary>
+        /// **Enum of different figures.**
+        /// </summary>
         enum ComboBoxFiguresIndex
         {
             Triangle = 0, Quadrilateral, PentagonCanvas, Circle
         }
         //comboBox SelectionChanged function to show a figure canvas and to fill combobox of the figure's type
+        /// <summary>
+        /// **The method makes different canvases visible depending on selection of the main comboBox.**
+        /// </summary>
+        /// <param name="sender">The element that called the method.</param>
+        /// <param name="e">Contains state information and event data associated with a routed event.</param>
         private void ComboBoxFiguresCanvases_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
@@ -158,6 +184,12 @@ namespace OOP_Lab_1
 
         }
         //combobox fill function
+        //comboBox SelectionChanged function to show a figure canvas and to fill combobox of the figure's type
+        /// <summary>
+        /// **The method fills comboBox of figure type depending on selection of the main comboBox.**
+        /// </summary>
+        /// <param name="sender">The element that called the method.</param>
+        /// <param name="e">Contains state information and event data associated with a routed event.</param>
         private void TypeComboBoxFill()
         {
             figureTypeComboBox.Items.Clear();
@@ -188,6 +220,13 @@ namespace OOP_Lab_1
 
         }
         //setting of textboxes by figure type
+
+        /// <summary>
+        /// **The method fills different textBoxes depending on selection of figureTypeComboBox.** 
+        /// **Also subscribes text boxes on FiguresTextBox_TextChanged depending on selection of type.**
+        /// </summary>
+        /// <param name="sender">The element that called the method.</param>
+        /// <param name="e">Contains state information and event data associated with a routed event.</param>
         private void ComboBoxFigureType_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             TextBoxesResetToDefault(stackPanelFiguresCanvases);  
@@ -277,6 +316,10 @@ namespace OOP_Lab_1
         }
 
         //TextBoxFunctions 
+        /// <summary>
+        /// **The method resets all textBoxes on stackPanel to default settings.**
+        /// </summary>
+
         private void TextBoxesResetToDefault(StackPanel stackPanel)
         {
             TextBox tx;
@@ -302,6 +345,11 @@ namespace OOP_Lab_1
             }
         }
         //textChanged event, different behaviour for every figure 
+        /// <summary>
+        /// **The method makes different behaviour of textBoxes depending on figureTypeComboBox.**
+        /// </summary>
+        /// <param name="sender">The element that called the method.</param>
+        /// <param name="e">Contains state information and event data associated with a routed event.</param>
         private void FiguresTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             TextBox tx = sender as TextBox;

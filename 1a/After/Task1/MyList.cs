@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace OOP_Lab_1
-{
 
-    public class MyList<T> where T : IComparable
+/// <summary>
+/// **Own list, which is used for all exercises of the first part.**
+/// </summary>
+
+public class MyList<T> where T : IComparable
     {
        
         public class Node
@@ -39,7 +41,12 @@ namespace OOP_Lab_1
         
         public int length { get; set; }
         private Node? head;
-        public T this[int i]
+    /// <summary>
+    /// **Operator [] overloading.**
+    /// </summary>
+    /// <param name="i"> Index of element that we need to find.</param>
+    /// <returns>If element was found returns data under index element. Otherwise throws error.</returns>
+    public T this[int i]
         {
             get 
             {
@@ -71,8 +78,12 @@ namespace OOP_Lab_1
         {
             head = null;
         }
-
-       public int FindByValue(T value)
+    /// <summary>
+    /// **Method for finding index by element.**
+    /// </summary>
+    /// <param name="value"></param>
+    /// <returns></returns>
+    public int FindByValue(T value)
         {
             int index = 0;
             Node? current = head;
@@ -88,9 +99,13 @@ namespace OOP_Lab_1
             return index;
             
         }
-        public void AddHead(T t)
+    /// <summary>
+    /// **Add element to top of list. **
+    /// </summary>
+    /// <param name="element">Element that we want to add.</param>
+    public void AddHead(T element)
         {
-            Node n = new Node(t);
+            Node n = new Node(element);
             if (length==0)
             {
                 head = n;
@@ -115,7 +130,12 @@ namespace OOP_Lab_1
             }
             length++;
         }
-        public override bool Equals(object obj)
+    /// <summary>
+    ///** Method for comparing two lists.**
+    /// </summary>
+    /// <param name="obj">The object being tested to see if it is a list. </param>
+    /// <returns>If lists are same returns true. Otherwise false.</returns>
+    public override bool Equals(object obj)
         {
             var otherList = obj as MyList<T>;
 
@@ -139,7 +159,11 @@ namespace OOP_Lab_1
 
             return true;
         }
-        public IEnumerator<T> GetEnumerator()
+    /// <summary>
+    /// **The method are using in for each.**
+    /// </summary>
+    /// <returns></returns>
+    public IEnumerator<T> GetEnumerator()
         {
             Node? current = head;
 
@@ -151,4 +175,4 @@ namespace OOP_Lab_1
         }
       
     }
-}
+

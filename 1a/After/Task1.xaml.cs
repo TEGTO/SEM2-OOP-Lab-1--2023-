@@ -3,17 +3,27 @@ using System.Windows;
 
 namespace OOP_Lab_1
 {
+    /// <summary>
+    /// **Task1 class that contains tasks of part one of exercise.**
+    /// </summary>
     public partial class Task1 : Window
     {
 
         MyList<int> listToSort = new MyList<int> { };
         SortEventHandler<int> subscribeSortMethods = new SortEventHandler<int>();
+        /// <summary>
+        ///  **Initialize UI and elements**
+        /// </summary>
         public Task1()
         {
             InitializeComponent();
-
+         
         }
-
+        /// <summary>
+        /// **Button method for adding new random elements in range (0,100) to listToSort**.
+        /// </summary>
+        /// <param name="sender">The element that called the method.</param>
+        /// <param name="e">Contains state information and event data associated with a routed event.</param>
         //add element button
         private void Button_AddElement(object sender, RoutedEventArgs e)
         {
@@ -25,28 +35,41 @@ namespace OOP_Lab_1
 
 
         }
+        /// <summary>
+        /// **Button method for shuffling elements in listToSort**.
+        /// </summary>
+        /// <param name="sender">The element that called the method.</param>
+        /// <param name="e"> Contains state information and event data associated with a routed event.</param>
         //shuffle and print listToSort button 
         private void Button_ShuffleList(object sender, RoutedEventArgs e)
         {
 
             Random random = new Random();
-
+            
             for (int i = 0; i < listToSort.length; i++)
             {
                 listToSort[i] = random.Next(100);
+               
             }
 
             PrintList();
         }
+        /// <summary>
+        /// **The function that is used to subscribe the sort methods to the sort event.**
+        /// </summary>
+        /// <param name="methodForSigning">Sort method that would be subscribed.</param>
         //function to subscribe sort methods and sort listToSort
-        void SubscribeAndSort(ISortMethod<int> foo)
+        void SubscribeAndSort(ISortMethod<int> methodForSigning)
         {
-            subscribeSortMethods.sortMethod += foo.Sort;
+            subscribeSortMethods.sortMethod += methodForSigning.Sort;
             subscribeSortMethods.Sort(listToSort);
-            subscribeSortMethods.sortMethod -= foo.Sort;
+            subscribeSortMethods.sortMethod -= methodForSigning.Sort;
             PrintList();
         }
         //print list to sort
+        /// <summary>
+        /// **Method for printing list.**
+        /// </summary>
         void PrintList()
         {
             textBox.Text = "";
@@ -58,53 +81,91 @@ namespace OOP_Lab_1
 
             }
         }
-
+        /// <summary>
+        /// **Button method that uses the print function.**
+        /// </summary>
+        /// <param name="sender">The element that called the method.</param>
+        /// <param name="e"> Contains state information and event data associated with a routed event.</param>
         private void Button_PrintList(object sender, RoutedEventArgs e)
         {
             PrintList();
         }
         //Different buttons that contain different sort methods 
+        /// <summary>
+        /// **Button method that subscribes InsertionSort method.**
+        /// </summary>
+        /// <param name="sender">The element that called the method.</param>
+        /// <param name="e"> Contains state information and event data associated with a routed event.</param>
         private void Button_InsertionSort(object sender, RoutedEventArgs e)
         {
-            var insertion = new Insertion<int>();
+            var insertion = new InsertionSort<int>();
             SubscribeAndSort(insertion);
         }
-
+        /// <summary>
+        /// **Button method that subscribes QuickSort method.**
+        /// </summary>
+        /// <param name="sender">The element that called the method.</param>
+        /// <param name="e"> Contains state information and event data associated with a routed event.</param>
         private void Button_QuickSort(object sender, RoutedEventArgs e)
         {
             var quickSort = new QuickSort<int>();
             SubscribeAndSort(quickSort);
         }
+        /// <summary>
+        /// **Button method that subscribes MergeSort method.**
+        /// </summary>
+        /// <param name="sender">The element that called the method.</param>
+        /// <param name="e"> Contains state information and event data associated with a routed event.</param>
         private void Button_MergeSort(object sender, RoutedEventArgs e)
         {
             var mergeSort = new MergeSort<int>();
             SubscribeAndSort(mergeSort);
         }
-
+        /// <summary>
+        ///**Button method that subscribes BubbleSort method.**
+        /// </summary>
+        /// <param name="sender">The element that called the method.</param>
+        /// <param name="e"> Contains state information and event data associated with a routed event.</param>
         private void Button_BubbleSort(object sender, RoutedEventArgs e)
         {
             var bubbleSort = new BubbleSort<int>();
             SubscribeAndSort(bubbleSort);
         }
-
+        /// <summary>
+        /// **Button method that subscribes SelectionSort method.**
+        /// </summary>
+        /// <param name="sender">The element that called the method.</param>
+        /// <param name="e"> Contains state information and event data associated with a routed event.</param>
         private void Button_SelectionSort(object sender, RoutedEventArgs e)
         {
             var selectionSort = new SelectionSort<int>();
             SubscribeAndSort(selectionSort);
         }
-
+        /// <summary>
+        ///**Button method that subscribes CountingSort method.**
+        /// </summary>
+        /// <param name="sender">The element that called the method.</param>
+        /// <param name="e"> Contains state information and event data associated with a routed event.</param>
         private void Button_CountingSort(object sender, RoutedEventArgs e)
         {
             var countingSort = new CountingSort<int>();
             SubscribeAndSort(countingSort);
         }
-
+        /// <summary>
+        /// **Button method that subscribes BucketSort method.**
+        /// </summary>
+        /// <param name="sender">The element that called the method.</param>
+        /// <param name="e"> Contains state information and event data associated with a routed event.</param>
         private void Button_BucketSort(object sender, RoutedEventArgs e)
         {
             var bucketSort = new BucketSort<int>();
             SubscribeAndSort(bucketSort);
         }
-
+        /// <summary>
+        /// **Button method that opens Task2 window.**
+        /// </summary>
+        /// <param name="sender">The element that called the method.</param>
+        /// <param name="e"> Contains state information and event data associated with a routed event.</param>
         private void Button_OpenTask2(object sender, RoutedEventArgs e)
         {
 

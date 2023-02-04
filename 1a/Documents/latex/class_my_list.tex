@@ -1,0 +1,127 @@
+\hypertarget{class_my_list}{}\doxysection{My\+List\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\label{class_my_list}\index{MyList$<$ T $>$@{MyList$<$ T $>$}}
+
+
+{\bfseries{Own list, which is used for all exercises of the first part.}}  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_my_list_a265e9792990b35db291cbde75ac9a2ef}{Find\+By\+Value}} (T value)
+\begin{DoxyCompactList}\small\item\em {\bfseries{Method for finding index by element.}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_my_list_aa2e76343c1c59fd1510a93e22a6af694}{Add\+Head}} (T element)
+\begin{DoxyCompactList}\small\item\em $\ast$$\ast$\+Add element to top of list. $\ast$$\ast$ \end{DoxyCompactList}\item 
+override bool \mbox{\hyperlink{class_my_list_a0a503ec59b0b764e7a8da1e38df3271c}{Equals}} (object obj)
+\begin{DoxyCompactList}\small\item\em $\ast$$\ast$ Method for comparing two lists.$\ast$$\ast$ \end{DoxyCompactList}\item 
+IEnumerator$<$ T $>$ \mbox{\hyperlink{class_my_list_a1a3e99f349e306e268fbba8808ba9957}{Get\+Enumerator}} ()
+\begin{DoxyCompactList}\small\item\em {\bfseries{The method are using in for each.}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_my_list_a6473f34e5b8ae264bc13ee291a81c1f9}\label{class_my_list_a6473f34e5b8ae264bc13ee291a81c1f9}} 
+int {\bfseries length}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+T \mbox{\hyperlink{class_my_list_adb113f2f75a60a2dfb69916e58cf0bbb}{this\mbox{[}int i\mbox{]}}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em {\bfseries{Operator \mbox{[}\mbox{]} overloading.}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_my_list_a2c29cfac88e52b7abebcd9400f212047}\label{class_my_list_a2c29cfac88e52b7abebcd9400f212047}} 
+Node? {\bfseries head}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+{\bfseries{Own list, which is used for all exercises of the first part.}} \begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em IComparable}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_my_list_aa2e76343c1c59fd1510a93e22a6af694}\label{class_my_list_aa2e76343c1c59fd1510a93e22a6af694}} 
+\index{MyList$<$ T $>$@{MyList$<$ T $>$}!AddHead@{AddHead}}
+\index{AddHead@{AddHead}!MyList$<$ T $>$@{MyList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{AddHead()}{AddHead()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_my_list}{My\+List}}$<$ T $>$.Add\+Head (\begin{DoxyParamCaption}\item[{T}]{element }\end{DoxyParamCaption})}
+
+
+
+$\ast$$\ast$\+Add element to top of list. $\ast$$\ast$ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & Element that we want to add.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_my_list_a0a503ec59b0b764e7a8da1e38df3271c}\label{class_my_list_a0a503ec59b0b764e7a8da1e38df3271c}} 
+\index{MyList$<$ T $>$@{MyList$<$ T $>$}!Equals@{Equals}}
+\index{Equals@{Equals}!MyList$<$ T $>$@{MyList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Equals()}{Equals()}}
+{\footnotesize\ttfamily override bool \mbox{\hyperlink{class_my_list}{My\+List}}$<$ T $>$.Equals (\begin{DoxyParamCaption}\item[{object}]{obj }\end{DoxyParamCaption})}
+
+
+
+$\ast$$\ast$ Method for comparing two lists.$\ast$$\ast$ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & The object being tested to see if it is a list. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If lists are same returns true. Otherwise false.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_my_list_a265e9792990b35db291cbde75ac9a2ef}\label{class_my_list_a265e9792990b35db291cbde75ac9a2ef}} 
+\index{MyList$<$ T $>$@{MyList$<$ T $>$}!FindByValue@{FindByValue}}
+\index{FindByValue@{FindByValue}!MyList$<$ T $>$@{MyList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{FindByValue()}{FindByValue()}}
+{\footnotesize\ttfamily int \mbox{\hyperlink{class_my_list}{My\+List}}$<$ T $>$.Find\+By\+Value (\begin{DoxyParamCaption}\item[{T}]{value }\end{DoxyParamCaption})}
+
+
+
+{\bfseries{Method for finding index by element.}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_my_list_a1a3e99f349e306e268fbba8808ba9957}\label{class_my_list_a1a3e99f349e306e268fbba8808ba9957}} 
+\index{MyList$<$ T $>$@{MyList$<$ T $>$}!GetEnumerator@{GetEnumerator}}
+\index{GetEnumerator@{GetEnumerator}!MyList$<$ T $>$@{MyList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetEnumerator()}{GetEnumerator()}}
+{\footnotesize\ttfamily IEnumerator$<$ T $>$ \mbox{\hyperlink{class_my_list}{My\+List}}$<$ T $>$.Get\+Enumerator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+{\bfseries{The method are using in for each.}} 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_my_list_adb113f2f75a60a2dfb69916e58cf0bbb}\label{class_my_list_adb113f2f75a60a2dfb69916e58cf0bbb}} 
+\index{MyList$<$ T $>$@{MyList$<$ T $>$}!this\mbox{[}int i\mbox{]}@{this[int i]}}
+\index{this\mbox{[}int i\mbox{]}@{this[int i]}!MyList$<$ T $>$@{MyList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{this[int i]}{this[int i]}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{class_my_list}{My\+List}}$<$ T $>$.this\mbox{[}int i\mbox{]}\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+{\bfseries{Operator \mbox{[}\mbox{]} overloading.}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Index of element that we need to find.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If element was found returns data under index element. Otherwise throws error.
+\end{DoxyReturn}
