@@ -246,8 +246,7 @@ namespace OOP_Lab_1
                      S = Math.Sqrt((p - firstSide) * (p - secondSide) * (p - thirdSide) * (p - fourthSide) - firstSide * secondSide * thirdSide * fourthSide * Math.Pow(Math.Cos(Math.PI / 180 * delta), 2));
                     return (float)S;
                 case (int)QuadrilateralTypes.InvalidType:
-                    throw new Exception();
-                    break;
+                    throw new Exception(); 
                 default:
                     break;
             }

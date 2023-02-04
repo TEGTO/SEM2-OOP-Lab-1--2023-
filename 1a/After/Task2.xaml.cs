@@ -190,7 +190,7 @@ namespace OOP_Lab_1
         //setting of textboxes by figure type
         private void ComboBoxFigureType_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            TextBoxesResetToDefault(stackPanelFiguresCanvases);
+            TextBoxesResetToDefault(stackPanelFiguresCanvases);  
             switch (figuresComboBox.SelectedIndex)
             {
                 case (int)ComboBoxFiguresIndex.Triangle:
@@ -212,9 +212,7 @@ namespace OOP_Lab_1
                             break;
                         case (int)TriangleTypes.Right:
                             triangleTextBox_FirstAngle.Text = "90";
-                            triangleTextBox_FirstAngle.IsReadOnly = true; 
-                            triangleTextBox_SecondAngle.Text = "90";
-                            triangleTextBox_SecondAngle.IsReadOnly = true;
+                            triangleTextBox_FirstAngle.IsReadOnly = true;     
                             break;
                         default:
                             break;
@@ -254,11 +252,18 @@ namespace OOP_Lab_1
                         case (int)QuadrilateralTypes.TrapezoidRight:
                             quadrilateralTextBox_FirstAngle.Text = "90";
                             quadrilateralTextBox_FirstAngle.IsReadOnly = true;
+                            quadrilateralTextBox_SecondAngle.Text = "90";
+                            quadrilateralTextBox_SecondAngle.IsReadOnly = true;
+                            quadrilateralTextBox_ThirdAngle.TextChanged += FiguresTextBox_TextChanged;
+                            quadrilateralTextBox_FourthAngle.TextChanged += FiguresTextBox_TextChanged;
                             break;
                         case (int)QuadrilateralTypes.TrapezoidIsosceles:
+                        case (int)QuadrilateralTypes.Trapezoid:
                             quadrilateralTextBox_FirstSide.TextChanged += FiguresTextBox_TextChanged;
                             quadrilateralTextBox_ThirdSide.TextChanged += FiguresTextBox_TextChanged;
                             quadrilateralTextBox_FirstAngle.TextChanged += FiguresTextBox_TextChanged;
+                            quadrilateralTextBox_SecondAngle.TextChanged += FiguresTextBox_TextChanged;
+                            quadrilateralTextBox_ThirdAngle.TextChanged += FiguresTextBox_TextChanged;
                             quadrilateralTextBox_FourthAngle.TextChanged += FiguresTextBox_TextChanged;
                             break;
                         default:
@@ -287,8 +292,9 @@ namespace OOP_Lab_1
                         {
                             tx = element as TextBox;
                             tx.IsReadOnly = false;
-                            tx.Text = "";
                             tx.TextChanged -= FiguresTextBox_TextChanged;
+                            tx.Text = "";
+                           
                         }
                     }
                 }
@@ -381,11 +387,19 @@ namespace OOP_Lab_1
 
                             }
                             break;
-                        case (int)QuadrilateralTypes.TrapezoidIsosceles:
+                        case (int)QuadrilateralTypes.TrapezoidIsosceles:          
                             if (tx == quadrilateralTextBox_FirstAngle || tx == quadrilateralTextBox_FourthAngle)
                             {
                                 quadrilateralTextBox_FirstAngle.Text = tx.Text;
                                 quadrilateralTextBox_FourthAngle.Text = tx.Text;
+                            }
+                            else if (tx == quadrilateralTextBox_SecondAngle || tx == quadrilateralTextBox_ThirdAngle)
+                            {
+
+                                quadrilateralTextBox_SecondAngle.Text = tx.Text;
+                                quadrilateralTextBox_ThirdAngle.Text = tx.Text; 
+
+                              
                             }
                             else
                             {
@@ -394,6 +408,38 @@ namespace OOP_Lab_1
                             }
                             break;
                         default:
+                            break;
+                        case (int)QuadrilateralTypes.Trapezoid:
+                        case (int)QuadrilateralTypes.TrapezoidRight:
+                            float buffer;
+                            float.TryParse(tx.Text, out buffer);
+                            if (tx == quadrilateralTextBox_FirstAngle || tx == quadrilateralTextBox_SecondAngle)
+                            {
+                                if (tx == quadrilateralTextBox_FirstAngle)
+                                {
+                                    quadrilateralTextBox_FirstAngle.Text = tx.Text;
+                                    quadrilateralTextBox_SecondAngle.Text = (180 - buffer).ToString();
+                                }
+                                else
+                                {
+                                    quadrilateralTextBox_SecondAngle.Text = tx.Text;
+                                    quadrilateralTextBox_FirstAngle.Text = (180 - buffer).ToString();
+                                }
+                            }
+                            else if (tx == quadrilateralTextBox_FourthAngle || tx == quadrilateralTextBox_ThirdAngle)
+                            {
+                                if (tx == quadrilateralTextBox_FourthAngle)
+                                {
+                                    quadrilateralTextBox_FourthAngle.Text = tx.Text;
+                                    quadrilateralTextBox_ThirdAngle.Text = (180 - buffer).ToString();
+                                }
+                                else
+                                {
+                                    quadrilateralTextBox_ThirdAngle.Text = tx.Text;
+                                    quadrilateralTextBox_FourthAngle.Text = (180 - buffer).ToString();
+                                }
+                              
+                            }
                             break;
                     }
                     break;
