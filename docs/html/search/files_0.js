@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['app_2examl_2ecs_0',['App.xaml.cs',['../_app_8xaml_8cs.html',1,'']]],
-  ['assemblyinfo_2ecs_1',['AssemblyInfo.cs',['../_assembly_info_8cs.html',1,'']]]
+  ['_2enetcoreapp_2cversion_3dv3_2e0_2eassemblyattributes_2ecs_0',['.NETCoreApp,Version=v3.0.AssemblyAttributes.cs',['../a00146.html',1,'']]]
 ];

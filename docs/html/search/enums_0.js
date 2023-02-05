@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['comboboxfiguresindex_0',['ComboBoxFiguresIndex',['../class_o_o_p___lab__1_1_1_task2.html#a17d1d5a6956cd22ec0d82d97a2d0ee55',1,'OOP_Lab_1::Task2']]]
+  ['comboboxfiguresindex_0',['ComboBoxFiguresIndex',['../a00213.html#a13a0bec45ddcb3e6568a8aa52363bd7a',1,'OOP_Lab_1::Task2']]]
 ];

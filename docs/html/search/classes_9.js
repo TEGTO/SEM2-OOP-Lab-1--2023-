@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['unittest_0',['UnitTest',['../class_o_o_p___lab__1_1_1_unit_test.html',1,'OOP_Lab_1']]],
-  ['unittests_1',['UnitTests',['../class_o_o_p___lab__1_1_1_unit_tests.html',1,'OOP_Lab_1']]]
+  ['task1_0',['Task1',['../a00209.html',1,'OOP_Lab_1']]],
+  ['task2_1',['Task2',['../a00213.html',1,'OOP_Lab_1']]],
+  ['textchecking_2',['TextChecking',['../a00281.html',1,'OOP_Lab_1']]],
+  ['triangle_3',['Triangle',['../a00265.html',1,'']]]
 ];

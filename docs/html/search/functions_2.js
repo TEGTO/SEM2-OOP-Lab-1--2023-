@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['calculationsfilllabels_0',['CalculationsFillLabels',['../class_o_o_p___lab__1_1_1_task2.html#ab178a3957baa703ebd14878658c721bf',1,'OOP_Lab_1::Task2']]],
-  ['comboboxfigurescanvases_5fselectionchanged_1',['ComboBoxFiguresCanvases_SelectionChanged',['../class_o_o_p___lab__1_1_1_task2.html#abf68543ef850ed07145addcae59befeb',1,'OOP_Lab_1::Task2']]],
-  ['comboboxfiguretype_5fselectionchanged_2',['ComboBoxFigureType_SelectionChanged',['../class_o_o_p___lab__1_1_1_task2.html#a00f2ed463b3a345d432645cf9b2d2630',1,'OOP_Lab_1::Task2']]]
+  ['calculationsfilllabels_0',['CalculationsFillLabels',['../a00213.html#a9355dc1e6602bcb6afcb668e0dbee855',1,'OOP_Lab_1::Task2']]],
+  ['comboboxfigurescanvases_5fselectionchanged_1',['ComboBoxFiguresCanvases_SelectionChanged',['../a00213.html#a5f4cf9e52acafb6b84c5571364da2e36',1,'OOP_Lab_1::Task2']]],
+  ['comboboxfiguretype_5fselectionchanged_2',['ComboBoxFigureType_SelectionChanged',['../a00213.html#a238eb45860c9c24f498e6d3bc8dce716',1,'OOP_Lab_1::Task2']]]
 ];

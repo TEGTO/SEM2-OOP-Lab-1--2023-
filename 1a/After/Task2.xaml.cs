@@ -5,15 +5,17 @@ using System.Windows.Controls;
 
 namespace OOP_Lab_1
 {
+  
+
     /// <summary>
-    /// Task2 class that contains tasks of part two of exercise. 
+    /// \details **Class that contains tasks of part two of exercise.**
     /// </summary>
 
     public partial class Task2 : Window
     {
 
         /// <summary>
-        ///  **Initialize UI and elements.**
+        ///  Initialize UI and some elements.
         /// </summary>
 
 
@@ -26,7 +28,7 @@ namespace OOP_Lab_1
         //Calculation
         //calculation button
         /// <summary>
-        /// **Button method to start calculations.**
+        /// Button method to start calculations functions.
         /// </summary>
         /// <param name="sender">The element that called the method.</param>
         /// <param name="e">Contains state information and event data associated with a routed event.</param>
@@ -47,7 +49,8 @@ namespace OOP_Lab_1
         }
         //give values from textboxes to static classes
         /// <summary>
-        ///**The method gives values from all textboxes to static class for calculations.**
+        ///The method gives values from all textboxes to static class for calculations.
+        ///\details Throws exception if textboxes are empty.
         /// </summary>
 
         public void GiveValuesToClasses()
@@ -96,7 +99,7 @@ namespace OOP_Lab_1
         }
         //perform calculations and fill in labels based on the results
         /// <summary>
-        /// **The method fills labels with results of calculations.**
+        /// The method fills labels with results of calculations functions.
         /// </summary>
         private void CalculationsFillLabels()
         {
@@ -125,7 +128,7 @@ namespace OOP_Lab_1
 
         //hide all figures canvases
         /// <summary>
-        /// **The method hides all canvases on stackPanel.**
+        /// The method hides all canvases on a stackpanel.
         /// </summary>
 
         private void HideAllCanvases(StackPanel stackPanel)
@@ -143,15 +146,30 @@ namespace OOP_Lab_1
         }
         //ComboBoxFunctions
         /// <summary>
-        /// **Enum of different figures.**
+        /// Enum of different figures.
         /// </summary>
         enum ComboBoxFiguresIndex
         {
-            Triangle = 0, Quadrilateral, PentagonCanvas, Circle
+            /// <summary>
+            /// Triangle figure.
+            /// </summary>
+            Triangle = 0,
+            /// <summary>
+            /// Quadrilateral figure.
+            /// </summary>
+            Quadrilateral,
+            /// <summary>
+            /// PentagonCanvas figure.
+            /// </summary>
+            PentagonCanvas,
+            /// <summary>
+            /// Circle figure.
+            /// </summary>
+            Circle
         }
         //comboBox SelectionChanged function to show a figure canvas and to fill combobox of the figure's type
         /// <summary>
-        /// **The method makes different canvases visible depending on selection of the main comboBox.**
+        /// The method makes different canvases visible depending on selection of the main comboBox.
         /// </summary>
         /// <param name="sender">The element that called the method.</param>
         /// <param name="e">Contains state information and event data associated with a routed event.</param>
@@ -186,10 +204,9 @@ namespace OOP_Lab_1
         //combobox fill function
         //comboBox SelectionChanged function to show a figure canvas and to fill combobox of the figure's type
         /// <summary>
-        /// **The method fills comboBox of figure type depending on selection of the main comboBox.**
+        /// The method fills the combobox of figure type depending on selection of the main combobox.
         /// </summary>
-        /// <param name="sender">The element that called the method.</param>
-        /// <param name="e">Contains state information and event data associated with a routed event.</param>
+
         private void TypeComboBoxFill()
         {
             figureTypeComboBox.Items.Clear();
@@ -222,8 +239,8 @@ namespace OOP_Lab_1
         //setting of textboxes by figure type
 
         /// <summary>
-        /// **The method fills different textBoxes depending on selection of figureTypeComboBox.** 
-        /// **Also subscribes text boxes on FiguresTextBox_TextChanged depending on selection of type.**
+        /// The method fills different textboxes depending on selection of figureTypeComboBox.
+        /// \details Also subscribes text boxes on FiguresTextBox_TextChanged depending on selection of type.
         /// </summary>
         /// <param name="sender">The element that called the method.</param>
         /// <param name="e">Contains state information and event data associated with a routed event.</param>
@@ -317,7 +334,7 @@ namespace OOP_Lab_1
 
         //TextBoxFunctions 
         /// <summary>
-        /// **The method resets all textBoxes on stackPanel to default settings.**
+        /// he method resets all textBoxes on stackPanel to default settings.
         /// </summary>
 
         private void TextBoxesResetToDefault(StackPanel stackPanel)
@@ -346,7 +363,8 @@ namespace OOP_Lab_1
         }
         //textChanged event, different behaviour for every figure 
         /// <summary>
-        /// **The method makes different behaviour of textBoxes depending on figureTypeComboBox.**
+        /// The method makes different behaviour of textboxes depending on figureTypeComboBox.
+        /// \details All types of figures have different behaviour. Method fills and make textboxes uneditable depending on type.
         /// </summary>
         /// <param name="sender">The element that called the method.</param>
         /// <param name="e">Contains state information and event data associated with a routed event.</param>

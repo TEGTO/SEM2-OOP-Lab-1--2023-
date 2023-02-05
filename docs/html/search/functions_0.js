@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['addhead_0',['AddHead',['../class_my_list.html#aa2e76343c1c59fd1510a93e22a6af694',1,'MyList']]]
+  ['addhead_0',['AddHead',['../a00217.html#a2ea6826c5a39c89966f056ebde0ef190',1,'MyList']]]
 ];

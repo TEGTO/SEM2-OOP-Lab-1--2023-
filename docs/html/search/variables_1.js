@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['subscribesortmethods_0',['subscribeSortMethods',['../class_o_o_p___lab__1_1_1_task1.html#aa4d01a28b306e45574072705f7c37e94',1,'OOP_Lab_1::Task1']]]
+  ['regex_0',['regex',['../a00281.html#a89768b56e80f3dde2cfa6333384dce6f',1,'OOP_Lab_1::TextChecking']]]
 ];

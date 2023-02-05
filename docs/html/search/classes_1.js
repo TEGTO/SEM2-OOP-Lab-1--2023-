@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['circle_0',['Circle',['../class_circle.html',1,'']]],
-  ['countingsort_1',['CountingSort',['../class_counting_sort.html',1,'']]]
+  ['bubblesort_0',['BubbleSort',['../a00249.html',1,'']]],
+  ['bucketsort_1',['BucketSort',['../a00261.html',1,'']]]
 ];

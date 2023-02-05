@@ -4,7 +4,11 @@ using System.Collections.Generic;
 
 /// <summary>
 /// **Own list, which is used for all exercises of the first part.**
+/// 
+/// \details The class contains another class that is used for iterations.
 /// </summary>
+/// 
+/// 
 
 public class MyList<T> where T : IComparable
     {
@@ -38,11 +42,16 @@ public class MyList<T> where T : IComparable
 
             
         }
-        
+        /// <summary>
+        /// Length of the list.
+        /// </summary>
         public int length { get; set; }
+    /// <summary>
+    /// First element of the list.
+    /// </summary>
         private Node? head;
     /// <summary>
-    /// **Operator [] overloading.**
+    /// Operator [] overloading.
     /// </summary>
     /// <param name="i"> Index of element that we need to find.</param>
     /// <returns>If element was found returns data under index element. Otherwise throws error.</returns>
@@ -79,10 +88,10 @@ public class MyList<T> where T : IComparable
             head = null;
         }
     /// <summary>
-    /// **Method for finding index by element.**
+    /// Method for finding index by element.
     /// </summary>
     /// <param name="value"></param>
-    /// <returns></returns>
+    /// <returns>Returns index of the element.</returns>
     public int FindByValue(T value)
         {
             int index = 0;
@@ -100,7 +109,7 @@ public class MyList<T> where T : IComparable
             
         }
     /// <summary>
-    /// **Add element to top of list. **
+    /// Add element to top of list.
     /// </summary>
     /// <param name="element">Element that we want to add.</param>
     public void AddHead(T element)
@@ -131,7 +140,7 @@ public class MyList<T> where T : IComparable
             length++;
         }
     /// <summary>
-    ///** Method for comparing two lists.**
+    /// Method for comparing two lists.
     /// </summary>
     /// <param name="obj">The object being tested to see if it is a list. </param>
     /// <returns>If lists are same returns true. Otherwise false.</returns>
@@ -160,7 +169,7 @@ public class MyList<T> where T : IComparable
             return true;
         }
     /// <summary>
-    /// **The method are using in for each.**
+    /// The method are using in foreach.
     /// </summary>
     /// <returns></returns>
     public IEnumerator<T> GetEnumerator()

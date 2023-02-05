@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['parallelogram_0',['Parallelogram',['../namespace_o_o_p___lab__1.html#a4f5f0c5e46695b01532fc96ec92f6ae5a96463a1ecfd67258cb897a62af5a443f',1,'OOP_Lab_1']]],
-  ['pentagoncanvas_1',['PentagonCanvas',['../class_o_o_p___lab__1_1_1_task2.html#a17d1d5a6956cd22ec0d82d97a2d0ee55a7b1f500463496bbe3f43ebff5e018960',1,'OOP_Lab_1::Task2']]]
+  ['rectangle_0',['Rectangle',['../a00164.html#a948b379e5b3d6afc223d4c3001ed4518ace9291906a4c3b042650b70d7f3b152e',1,'Figures.cs']]],
+  ['rhombus_1',['Rhombus',['../a00164.html#a948b379e5b3d6afc223d4c3001ed4518ad62e74b4f4bdc571fb184229772ea930',1,'Figures.cs']]],
+  ['right_2',['Right',['../a00164.html#aaf47f5b0a92cbc51e97c1e16111e444da92b09c7c48c520c3c55e497875da437c',1,'Figures.cs']]]
 ];

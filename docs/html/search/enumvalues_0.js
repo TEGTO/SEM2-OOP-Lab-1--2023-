@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['circle_0',['Circle',['../class_o_o_p___lab__1_1_1_task2.html#a17d1d5a6956cd22ec0d82d97a2d0ee55a30954d90085f6eaaf5817917fc5fecb3',1,'OOP_Lab_1::Task2']]]
+  ['equilateral_0',['Equilateral',['../a00164.html#aaf47f5b0a92cbc51e97c1e16111e444da58501c1bbd5b9e2b1ae1a91707485d12',1,'Figures.cs']]]
 ];

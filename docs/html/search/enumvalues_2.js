@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['quadrilateral_0',['Quadrilateral',['../class_o_o_p___lab__1_1_1_task2.html#a17d1d5a6956cd22ec0d82d97a2d0ee55ab1aa854f21a681be6412a6df6340ab00',1,'OOP_Lab_1::Task2']]]
+  ['invalidtype_0',['InvalidType',['../a00164.html#aaf47f5b0a92cbc51e97c1e16111e444dac85f85f7c13ed006eed130ec183aa810',1,'InvalidType():&#160;Figures.cs'],['../a00164.html#a948b379e5b3d6afc223d4c3001ed4518ac85f85f7c13ed006eed130ec183aa810',1,'InvalidType():&#160;Figures.cs']]],
+  ['isosceles_1',['Isosceles',['../a00164.html#aaf47f5b0a92cbc51e97c1e16111e444da712765c6d7744cb19106cbc0cfb1dddc',1,'Figures.cs']]]
 ];

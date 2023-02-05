@@ -4,21 +4,33 @@ using System.Collections.Generic;
 using System.Linq;
 
 /// <summary>
-/// **Interface of all sort methods.**
+/// **Interface of all sort classes.**
 /// </summary>
 
 interface ISortMethod<T> where T : IComparable
 {
+    /// <summary>
+    /// Main sort method.
+    /// \details Using for sort a list.
+    /// </summary>
+    /// <param name="source">The element that called the method.</param>
+ 
     public void Sort(object source, SortingEventArgs<T> arg);
 }
 
 /// <summary>
-/// Insertion sort class implements the interface. Contains insertion method for sorting.
+/// Insertion sort class implements ISortMethod interface. 
+/// \details Contains insertion method for sorting.
 /// </summary>
 
 public class InsertionSort<T> : ISortMethod<T> where T: IComparable
 {
-      void Sorting(MyList<T> arr)
+
+    /// <summary>
+    /// Method for sorting a list.
+    /// </summary>
+    /// <param name="arr">List that will be sorted.</param>
+    void Sorting(MyList<T> arr)
     {
         
         int n = arr.length;
@@ -37,6 +49,12 @@ public class InsertionSort<T> : ISortMethod<T> where T: IComparable
         }
       
     }
+    /// <summary>
+    /// The method that was implemented from ISortMethod interface.
+    /// /details Used as way to subscribe the class on event.
+    /// </summary>
+    /// <param name="source">The element that called the method.</param>
+    /// <param name="arg"></param>
     public void Sort(object source, SortingEventArgs<T> arg)
     {
         Sorting(arg.myList);
@@ -45,7 +63,8 @@ public class InsertionSort<T> : ISortMethod<T> where T: IComparable
 
 }
 /// <summary>
-/// Quick sort class implements the interface. Contains quick method for sorting.
+/// Quick sort class implements ISortMethod interface. 
+/// \details Contains quick method for sorting.
 /// </summary>
 public class QuickSort<T> : ISortMethod<T> where T : IComparable
 {
@@ -72,8 +91,11 @@ public class QuickSort<T> : ISortMethod<T> where T : IComparable
         array[maxIndex] = buffer;
         return pivot;
     }
-
-     MyList<T>Sorting(MyList<T> array, int minIndex, int maxIndex)
+    /// <summary>
+    /// Method for sorting a list.
+    /// </summary>
+    /// <param name="array">List that will be sorted.</param>
+    MyList<T>Sorting(MyList<T> array, int minIndex, int maxIndex)
     {
         if (minIndex >= maxIndex)
         {
@@ -86,7 +108,12 @@ public class QuickSort<T> : ISortMethod<T> where T : IComparable
 
         return array;
     }
-
+    /// <summary>
+    /// The method that was implemented from ISortMethod interface.
+    /// /details Used as way to subscribe the class on event.
+    /// </summary>
+    /// <param name="source">The element that called the method.</param>
+    /// <param name="arg"></param>
     public void Sort(object source, SortingEventArgs<T> arg)
     {
          Sorting(arg.myList, 0, arg.myList.length - 1);
@@ -95,7 +122,8 @@ public class QuickSort<T> : ISortMethod<T> where T : IComparable
 }
 
 /// <summary>
-/// Merge sort class implements the interface. Contains merge method for sorting.
+/// Merge sort class implements ISortMethod interface. 
+/// \details Contains merge method for sorting.
 /// </summary>
 public class MergeSort<T> : ISortMethod<T> where T : IComparable
 {
@@ -142,7 +170,10 @@ public class MergeSort<T> : ISortMethod<T> where T : IComparable
             k++;
         }
     }
-
+    /// <summary>
+    /// Method for sorting a list.
+    /// </summary>
+    /// <param name="arr">List that will be sorted.</param>
     void Sorting(MyList<T> arr, int l, int r)
     {
         if (l < r)
@@ -155,18 +186,28 @@ public class MergeSort<T> : ISortMethod<T> where T : IComparable
             Merge(arr, l, m, r);
         }
     }
-   public void Sort(object source, SortingEventArgs<T> arg)
+    /// <summary>
+    /// The method that was implemented from ISortMethod interface.
+    /// /details Used as way to subscribe the class on event.
+    /// </summary>
+    /// <param name="source">The element that called the method.</param>
+    /// <param name="arg"></param>
+    public void Sort(object source, SortingEventArgs<T> arg)
     {
         Sorting(arg.myList, 0, arg.myList.length - 1);
     }
 }
 
 /// <summary>
-/// Bubble sort class implements the interface. Contains bubble method for sorting.
+/// Bubble sort class implements ISortMethod interface. 
+/// \details Contains bubble method for sorting.
 /// </summary>
 public class BubbleSort<T> : ISortMethod<T> where T : IComparable
-{
-     void bubbleSort(MyList<T> arr)
+{   /// <summary>
+    /// Method for sorting a list.
+    /// </summary>
+    /// <param name="arr">List that will be sorted.</param>
+    void bubbleSort(MyList<T> arr)
     {
         int n = arr.length;
         for (int i = 0; i < n - 1; i++)
@@ -179,6 +220,12 @@ public class BubbleSort<T> : ISortMethod<T> where T : IComparable
                     arr[j + 1] = temp;
                 }
     }
+    /// <summary>
+    /// The method that was implemented from ISortMethod interface.
+    /// /details Used as way to subscribe the class on event.
+    /// </summary>
+    /// <param name="source">The element that called the method.</param>
+    /// <param name="arg"></param>
     public void Sort(object source, SortingEventArgs<T> arg)
     {
         bubbleSort(arg.myList);
@@ -188,11 +235,16 @@ public class BubbleSort<T> : ISortMethod<T> where T : IComparable
 }
 
 /// <summary>
-/// Selection sort class implements the interface. Contains selection method for sorting.
+/// Selection sort class implements ISortMethod interface. 
+///\details Contains selection method for sorting.
 /// </summary>
 public class SelectionSort<T> : ISortMethod<T> where T : IComparable
 {
-     void Sorting(MyList<T> arr)
+    /// <summary>
+    /// Method for sorting a list.
+    /// </summary>
+    /// <param name="arr">List that will be sorted.</param>
+    void Sorting(MyList<T> arr)
     {
         int n = arr.length;
 
@@ -212,6 +264,12 @@ public class SelectionSort<T> : ISortMethod<T> where T : IComparable
 
 
     }
+    /// <summary>
+    /// The method that was implemented from ISortMethod interface.
+    /// /details Used as way to subscribe the class on event.
+    /// </summary>
+    /// <param name="source">The element that called the method.</param>
+    /// <param name="arg"></param>
     public void Sort(object source, SortingEventArgs<T> arg)
     {
         Sorting(arg.myList);
@@ -220,12 +278,19 @@ public class SelectionSort<T> : ISortMethod<T> where T : IComparable
 }
 
 /// <summary>
-/// Counting sort class implements the interface. Contains counting method for sorting.
+/// Counting sort class implements ISortMethod interface.
+/// details Contains counting method for sorting.
 /// </summary>
 
 public class CountingSort<T> : ISortMethod<T> where T : IComparable
 {
-     T FindMax(MyList<T> arr)
+    /// <summary>
+    /// Finds max element of the list.
+    /// </summary>
+    /// <param name="arr">List for searching.</param>
+    /// <returns></returns>
+    /// <exception cref="Exception">Throws exception if list is empty.</exception>
+    T FindMax(MyList<T> arr)
     {
         if (arr.length == 0)
         {
@@ -237,7 +302,13 @@ public class CountingSort<T> : ISortMethod<T> where T : IComparable
                 maxVal = arr[i];
         return maxVal;
     }
-      int FindMin(MyList<T> arr)
+    /// <summary>
+    /// Finds min element of the list.
+    /// </summary>
+    /// <param name="arr">List for searching.</param>
+    /// <returns></returns>
+    /// <exception cref="Exception">Throws exception if list is empty.</exception>
+    int FindMin(MyList<T> arr)
     {
         if (arr.length == 0)
         {
@@ -255,7 +326,10 @@ public class CountingSort<T> : ISortMethod<T> where T : IComparable
         return min;
     }
 
-  
+    /// <summary>
+    /// Method for sorting a list.
+    /// </summary>
+    /// <param name="arr">List that will be sorted.</param>
     void Sorting(MyList<T> arr)
     {
         if (typeof(T) != typeof(int))
@@ -286,6 +360,12 @@ public class CountingSort<T> : ISortMethod<T> where T : IComparable
             arr[i] =output[i];
         }
     }
+    /// <summary>
+    /// The method that was implemented from ISortMethod interface.
+    /// /details Used as way to subscribe the class on event.
+    /// </summary>
+    /// <param name="source">The element that called the method.</param>
+    /// <param name="arg"></param>
     public void Sort(object source, SortingEventArgs<T> arg)
     {
        
@@ -294,12 +374,17 @@ public class CountingSort<T> : ISortMethod<T> where T : IComparable
    
 }
 /// <summary>
-/// Bucket sort class implements the interface. Contains bucket method for sorting.
+/// Bucket sort class implements ISortMethod interface. 
+/// \details Contains bucket method for sorting.
 /// </summary>
 
 public class BucketSort<T> : ISortMethod<T> where T : IComparable
 {
-     void Sorting(MyList<T> arr)
+    /// <summary>
+    /// Method for sorting a list.
+    /// </summary>
+    /// <param name="arr">List that will be sorted.</param>
+    void Sorting(MyList<T> arr)
     {
         int n = arr.length;
         if (n <= 0)
@@ -329,6 +414,12 @@ public class BucketSort<T> : ISortMethod<T> where T : IComparable
             }
         }
     }
+    /// <summary>
+    /// The method that was implemented from ISortMethod interface.
+    /// /details Used as way to subscribe the class on event.
+    /// </summary>
+    /// <param name="source">The element that called the method.</param>
+    /// <param name="arg"></param>
     public void Sort(object source, SortingEventArgs<T> arg)
     {
 

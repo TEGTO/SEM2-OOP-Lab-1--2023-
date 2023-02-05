@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['definetype_0',['DefineType',['../class_triangle.html#a00469bbdfe07658a821dbed2edaa6d16',1,'Triangle.DefineType()'],['../class_quadrilateral.html#ae516e147ce36c9c6e57235b92e10a21e',1,'Quadrilateral.DefineType()']]]
+  ['definetype_0',['DefineType',['../a00265.html#a1ad97ad4640a11e4cf5431f3a1b6d313',1,'Triangle.DefineType()'],['../a00269.html#a1ad97ad4640a11e4cf5431f3a1b6d313',1,'Quadrilateral.DefineType()']]]
 ];

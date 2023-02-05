@@ -1,0 +1,122 @@
+\hypertarget{a00164}{}\doxysection{Figures.\+cs File Reference}
+\label{a00164}\index{Figures.cs@{Figures.cs}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{a00265}{Triangle}}
+\begin{DoxyCompactList}\small\item\em Static class that calculations Area, Perimeter and \mbox{\hyperlink{a00265}{Triangle}} Type depending on values of sides and angles.  \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{a00269}{Quadrilateral}}
+\begin{DoxyCompactList}\small\item\em Static class that calculations Area, Perimeter and \mbox{\hyperlink{a00269}{Quadrilateral}} Type depending on values of sides and angles.  \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{a00273}{Pentagon}}
+\begin{DoxyCompactList}\small\item\em Static class that calculations Area, Perimeter depending on value of the side.  \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{a00277}{Circle}}
+\begin{DoxyCompactList}\small\item\em Static class that calculations Area, Perimeter depending on value of the radius.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{a00164_aaf47f5b0a92cbc51e97c1e16111e444d}{Triangle\+Types}} \{ \newline
+\mbox{\hyperlink{a00164_aaf47f5b0a92cbc51e97c1e16111e444dac85f85f7c13ed006eed130ec183aa810}{Invalid\+Type}} = -\/1
+, \mbox{\hyperlink{a00164_aaf47f5b0a92cbc51e97c1e16111e444da87220b07f4279a6385e602b6f74fa31c}{Scalene}} = 0
+, \mbox{\hyperlink{a00164_aaf47f5b0a92cbc51e97c1e16111e444da58501c1bbd5b9e2b1ae1a91707485d12}{Equilateral}} = 1
+, \mbox{\hyperlink{a00164_aaf47f5b0a92cbc51e97c1e16111e444da712765c6d7744cb19106cbc0cfb1dddc}{Isosceles}} = 2
+, \newline
+\mbox{\hyperlink{a00164_aaf47f5b0a92cbc51e97c1e16111e444da92b09c7c48c520c3c55e497875da437c}{Right}} = 3
+ \}
+\begin{DoxyCompactList}\small\item\em Enum of triangle types.  \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{a00164_a948b379e5b3d6afc223d4c3001ed4518}{Quadrilateral\+Types}} \{ \newline
+\mbox{\hyperlink{a00164_a948b379e5b3d6afc223d4c3001ed4518ac85f85f7c13ed006eed130ec183aa810}{Invalid\+Type}} = -\/1
+, \mbox{\hyperlink{a00164_a948b379e5b3d6afc223d4c3001ed4518a23a1f04a306e66d98ec0c494f31e560c}{Free\+Quadrilateral}}
+, \mbox{\hyperlink{a00164_a948b379e5b3d6afc223d4c3001ed4518ace9291906a4c3b042650b70d7f3b152e}{Rectangle}}
+, \mbox{\hyperlink{a00164_a948b379e5b3d6afc223d4c3001ed4518aceb46ca115d05c51aa5a16a8867c3304}{Square}}
+, \newline
+\mbox{\hyperlink{a00164_a948b379e5b3d6afc223d4c3001ed4518ad62e74b4f4bdc571fb184229772ea930}{Rhombus}}
+, \mbox{\hyperlink{a00164_a948b379e5b3d6afc223d4c3001ed4518a96463a1ecfd67258cb897a62af5a443f}{Parallelogram}}
+, \mbox{\hyperlink{a00164_a948b379e5b3d6afc223d4c3001ed4518a7e7dd435b4cc7ba2b020d5a97856dc80}{Trapezoid}}
+, \mbox{\hyperlink{a00164_a948b379e5b3d6afc223d4c3001ed4518a58a61c2f2c14e6d67333c62c013d9619}{Trapezoid\+Right}}
+, \newline
+\mbox{\hyperlink{a00164_a948b379e5b3d6afc223d4c3001ed4518a6fa413b46d1e19b95be059fe67159456}{Trapezoid\+Isosceles}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enum of quadrilateral types.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{a00164_a948b379e5b3d6afc223d4c3001ed4518}\label{a00164_a948b379e5b3d6afc223d4c3001ed4518}} 
+\index{Figures.cs@{Figures.cs}!QuadrilateralTypes@{QuadrilateralTypes}}
+\index{QuadrilateralTypes@{QuadrilateralTypes}!Figures.cs@{Figures.cs}}
+\doxysubsubsection{\texorpdfstring{QuadrilateralTypes}{QuadrilateralTypes}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{a00164_a948b379e5b3d6afc223d4c3001ed4518}{Quadrilateral\+Types}}}
+
+
+
+Enum of quadrilateral types.  
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InvalidType@{InvalidType}!Figures.cs@{Figures.cs}}\index{Figures.cs@{Figures.cs}!InvalidType@{InvalidType}}}\mbox{\Hypertarget{a00164_a948b379e5b3d6afc223d4c3001ed4518ac85f85f7c13ed006eed130ec183aa810}\label{a00164_a948b379e5b3d6afc223d4c3001ed4518ac85f85f7c13ed006eed130ec183aa810}} 
+Invalid\+Type&Invalid type of a quadrilateral.  \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FreeQuadrilateral@{FreeQuadrilateral}!Figures.cs@{Figures.cs}}\index{Figures.cs@{Figures.cs}!FreeQuadrilateral@{FreeQuadrilateral}}}\mbox{\Hypertarget{a00164_a948b379e5b3d6afc223d4c3001ed4518a23a1f04a306e66d98ec0c494f31e560c}\label{a00164_a948b379e5b3d6afc223d4c3001ed4518a23a1f04a306e66d98ec0c494f31e560c}} 
+Free\+Quadrilateral&Free type of a quadrilateral.  \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Rectangle@{Rectangle}!Figures.cs@{Figures.cs}}\index{Figures.cs@{Figures.cs}!Rectangle@{Rectangle}}}\mbox{\Hypertarget{a00164_a948b379e5b3d6afc223d4c3001ed4518ace9291906a4c3b042650b70d7f3b152e}\label{a00164_a948b379e5b3d6afc223d4c3001ed4518ace9291906a4c3b042650b70d7f3b152e}} 
+Rectangle&A quadrilateral is rectangle.  \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Square@{Square}!Figures.cs@{Figures.cs}}\index{Figures.cs@{Figures.cs}!Square@{Square}}}\mbox{\Hypertarget{a00164_a948b379e5b3d6afc223d4c3001ed4518aceb46ca115d05c51aa5a16a8867c3304}\label{a00164_a948b379e5b3d6afc223d4c3001ed4518aceb46ca115d05c51aa5a16a8867c3304}} 
+Square&A quadrilateral is square.  \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Rhombus@{Rhombus}!Figures.cs@{Figures.cs}}\index{Figures.cs@{Figures.cs}!Rhombus@{Rhombus}}}\mbox{\Hypertarget{a00164_a948b379e5b3d6afc223d4c3001ed4518ad62e74b4f4bdc571fb184229772ea930}\label{a00164_a948b379e5b3d6afc223d4c3001ed4518ad62e74b4f4bdc571fb184229772ea930}} 
+Rhombus&A quadrilateral is rhombus.  \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Parallelogram@{Parallelogram}!Figures.cs@{Figures.cs}}\index{Figures.cs@{Figures.cs}!Parallelogram@{Parallelogram}}}\mbox{\Hypertarget{a00164_a948b379e5b3d6afc223d4c3001ed4518a96463a1ecfd67258cb897a62af5a443f}\label{a00164_a948b379e5b3d6afc223d4c3001ed4518a96463a1ecfd67258cb897a62af5a443f}} 
+Parallelogram&A quadrilateral is parallelogram.  \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Trapezoid@{Trapezoid}!Figures.cs@{Figures.cs}}\index{Figures.cs@{Figures.cs}!Trapezoid@{Trapezoid}}}\mbox{\Hypertarget{a00164_a948b379e5b3d6afc223d4c3001ed4518a7e7dd435b4cc7ba2b020d5a97856dc80}\label{a00164_a948b379e5b3d6afc223d4c3001ed4518a7e7dd435b4cc7ba2b020d5a97856dc80}} 
+Trapezoid&A quadrilateral is trapezoid.  \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TrapezoidRight@{TrapezoidRight}!Figures.cs@{Figures.cs}}\index{Figures.cs@{Figures.cs}!TrapezoidRight@{TrapezoidRight}}}\mbox{\Hypertarget{a00164_a948b379e5b3d6afc223d4c3001ed4518a58a61c2f2c14e6d67333c62c013d9619}\label{a00164_a948b379e5b3d6afc223d4c3001ed4518a58a61c2f2c14e6d67333c62c013d9619}} 
+Trapezoid\+Right&A quadrilateral is right trapezoid.  \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TrapezoidIsosceles@{TrapezoidIsosceles}!Figures.cs@{Figures.cs}}\index{Figures.cs@{Figures.cs}!TrapezoidIsosceles@{TrapezoidIsosceles}}}\mbox{\Hypertarget{a00164_a948b379e5b3d6afc223d4c3001ed4518a6fa413b46d1e19b95be059fe67159456}\label{a00164_a948b379e5b3d6afc223d4c3001ed4518a6fa413b46d1e19b95be059fe67159456}} 
+Trapezoid\+Isosceles&A quadrilateral is right isosceles trapezoid.  \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{a00164_aaf47f5b0a92cbc51e97c1e16111e444d}\label{a00164_aaf47f5b0a92cbc51e97c1e16111e444d}} 
+\index{Figures.cs@{Figures.cs}!TriangleTypes@{TriangleTypes}}
+\index{TriangleTypes@{TriangleTypes}!Figures.cs@{Figures.cs}}
+\doxysubsubsection{\texorpdfstring{TriangleTypes}{TriangleTypes}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{a00164_aaf47f5b0a92cbc51e97c1e16111e444d}{Triangle\+Types}}}
+
+
+
+Enum of triangle types.  
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InvalidType@{InvalidType}!Figures.cs@{Figures.cs}}\index{Figures.cs@{Figures.cs}!InvalidType@{InvalidType}}}\mbox{\Hypertarget{a00164_aaf47f5b0a92cbc51e97c1e16111e444dac85f85f7c13ed006eed130ec183aa810}\label{a00164_aaf47f5b0a92cbc51e97c1e16111e444dac85f85f7c13ed006eed130ec183aa810}} 
+Invalid\+Type&Ivalid type of a triangle.  \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Scalene@{Scalene}!Figures.cs@{Figures.cs}}\index{Figures.cs@{Figures.cs}!Scalene@{Scalene}}}\mbox{\Hypertarget{a00164_aaf47f5b0a92cbc51e97c1e16111e444da87220b07f4279a6385e602b6f74fa31c}\label{a00164_aaf47f5b0a92cbc51e97c1e16111e444da87220b07f4279a6385e602b6f74fa31c}} 
+Scalene&Scalene type of a triangle.  \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Equilateral@{Equilateral}!Figures.cs@{Figures.cs}}\index{Figures.cs@{Figures.cs}!Equilateral@{Equilateral}}}\mbox{\Hypertarget{a00164_aaf47f5b0a92cbc51e97c1e16111e444da58501c1bbd5b9e2b1ae1a91707485d12}\label{a00164_aaf47f5b0a92cbc51e97c1e16111e444da58501c1bbd5b9e2b1ae1a91707485d12}} 
+Equilateral&Equilateral type of a triangle.  \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Isosceles@{Isosceles}!Figures.cs@{Figures.cs}}\index{Figures.cs@{Figures.cs}!Isosceles@{Isosceles}}}\mbox{\Hypertarget{a00164_aaf47f5b0a92cbc51e97c1e16111e444da712765c6d7744cb19106cbc0cfb1dddc}\label{a00164_aaf47f5b0a92cbc51e97c1e16111e444da712765c6d7744cb19106cbc0cfb1dddc}} 
+Isosceles&Isosceles type of a triangle.  \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Right@{Right}!Figures.cs@{Figures.cs}}\index{Figures.cs@{Figures.cs}!Right@{Right}}}\mbox{\Hypertarget{a00164_aaf47f5b0a92cbc51e97c1e16111e444da92b09c7c48c520c3c55e497875da437c}\label{a00164_aaf47f5b0a92cbc51e97c1e16111e444da92b09c7c48c520c3c55e497875da437c}} 
+Right&Right type of a triangle.  \\
+\hline
+
+\end{DoxyEnumFields}

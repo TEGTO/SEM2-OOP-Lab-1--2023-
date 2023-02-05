@@ -5,26 +5,29 @@ using System.Windows.Input;
 namespace OOP_Lab_1
 {
     /// <summary>
-    /// Class for checking text in textBoxes. Allows only numbers.
+    /// Class for checking text in textboxes. 
+    /// \details Allows only numbers.
     /// </summary>
     public class TextChecking
     {
         /// <summary>
-        /// **Regex that matches disallowed text (only numbers).**
+        /// Regex that contains allowed text. (only numbers).
         /// </summary>
-        private static readonly Regex regex = new Regex("[^0-9.-]+"); //regex that matches disallowed text (only numbers)
+        private static readonly Regex regex = new Regex("[^0-9.-]+"); 
         /// <summary>
-        /// **Check if text is allowed.**
+        /// Method checks if text is allowed.
         /// </summary>
         /// <param name="text">Text to checking.</param>
-        /// <returns></returns>
+        /// <returns>Returns bool parameter. 
+        /// \details Returns true if text is allowed. Otherwise returns false.
+        /// </returns>
         private static bool IsTextAllowed(string text)
         {
             return !regex.IsMatch(text);
         }
         //set event to all textBoxes on canvases in stack panel 
         /// <summary>
-        /// **Set event to all textBoxes on canvases in stack panel **
+        /// Set event to all textboxes on canvases in stack panel.
         /// </summary>
         /// <param name="stackPanel"></param>
         public static void SetEventPreviewText(StackPanel stackPanel)
@@ -50,7 +53,7 @@ namespace OOP_Lab_1
             }
         }
         /// <summary>
-        /// **Allows text if text is correct.**
+        /// Event that allows text in a textbox if it is correct.
         /// </summary>
         /// <param name="sender">The element that called the method.</param>
         /// <param name="e">Contains state information and event data associated with a routed event.</param>

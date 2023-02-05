@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['task1_2examl_2ecs_0',['Task1.xaml.cs',['../_task1_8xaml_8cs.html',1,'']]],
-  ['task2_2examl_2ecs_1',['Task2.xaml.cs',['../_task2_8xaml_8cs.html',1,'']]]
+  ['app_2eg_2ecs_0',['App.g.cs',['../a00014.html',1,'']]],
+  ['app_2examl_2ecs_1',['App.xaml.cs',['../a00002.html',1,'']]],
+  ['assemblyinfo_2ecs_2',['AssemblyInfo.cs',['../a00005.html',1,'']]]
 ];

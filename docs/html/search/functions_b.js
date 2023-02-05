@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['task1_0',['Task1',['../class_o_o_p___lab__1_1_1_task1.html#a93f1494b5cc3ea97b27103e8e8fe79c0',1,'OOP_Lab_1::Task1']]],
-  ['task2_1',['Task2',['../class_o_o_p___lab__1_1_1_task2.html#a3dde45e7f60098352dc232bd693182b4',1,'OOP_Lab_1::Task2']]],
-  ['textboxesresettodefault_2',['TextBoxesResetToDefault',['../class_o_o_p___lab__1_1_1_task2.html#a424c52c6d698ddf6174eb9bcb6d3709f',1,'OOP_Lab_1::Task2']]],
-  ['typecomboboxfill_3',['TypeComboBoxFill',['../class_o_o_p___lab__1_1_1_task2.html#afeaac47627c396030e34195c95ab3dfb',1,'OOP_Lab_1::Task2']]]
+  ['seteventpreviewtext_0',['SetEventPreviewText',['../a00281.html#a06eb18a22b01d89c7c5f2a1c9d722d36',1,'OOP_Lab_1::TextChecking']]],
+  ['sort_1',['Sort',['../a00229.html#ad890c907dd55795584620ac86119ad11',1,'SortEventHandler.Sort()'],['../a00233.html#ae78e0f956bb9100f4b7d53d2133d258a',1,'ISortMethod.Sort()'],['../a00237.html#ae78e0f956bb9100f4b7d53d2133d258a',1,'InsertionSort.Sort()'],['../a00241.html#ae78e0f956bb9100f4b7d53d2133d258a',1,'QuickSort.Sort()'],['../a00245.html#ae78e0f956bb9100f4b7d53d2133d258a',1,'MergeSort.Sort()'],['../a00249.html#ae78e0f956bb9100f4b7d53d2133d258a',1,'BubbleSort.Sort()'],['../a00253.html#ae78e0f956bb9100f4b7d53d2133d258a',1,'SelectionSort.Sort()'],['../a00257.html#ae78e0f956bb9100f4b7d53d2133d258a',1,'CountingSort.Sort()'],['../a00261.html#ae78e0f956bb9100f4b7d53d2133d258a',1,'BucketSort.Sort()']]],
+  ['sorting_2',['Sorting',['../a00237.html#ac246e1986b4457cfaf25ad4714cd94e2',1,'InsertionSort.Sorting()'],['../a00241.html#a8394af5697c238748dc2be7434589817',1,'QuickSort.Sorting()'],['../a00245.html#a9cee223fcc27e75a8f70874cc60e0dc3',1,'MergeSort.Sorting()'],['../a00253.html#ac246e1986b4457cfaf25ad4714cd94e2',1,'SelectionSort.Sorting()'],['../a00257.html#ac246e1986b4457cfaf25ad4714cd94e2',1,'CountingSort.Sorting()'],['../a00261.html#ac246e1986b4457cfaf25ad4714cd94e2',1,'BucketSort.Sorting()']]],
+  ['startsorting_3',['StartSorting',['../a00229.html#a3aeaa5ad0323d9b4bf377d7fe376104f',1,'SortEventHandler']]],
+  ['subscribeandsort_4',['SubscribeAndSort',['../a00209.html#a9c056b6355d3aa745d7bc86abaceb954',1,'OOP_Lab_1::Task1']]]
 ];

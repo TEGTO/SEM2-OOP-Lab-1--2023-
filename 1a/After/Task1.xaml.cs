@@ -3,8 +3,47 @@ using System.Windows;
 
 namespace OOP_Lab_1
 {
+    /*! \mainpage Documentation of First OOP Lab. 
+*
+* \section intro_sec Task1
+* -Task1
+* 
+* -MyList
+* 
+* -SortEventHandler
+* 
+* -ISortMethod
+* 
+* -InsertionSort
+* 
+* -QuickSort
+* 
+* -MergeSort
+* 
+* -BubbleSort
+* 
+* -SelectionSort
+* 
+* -BucketSort
+* 
+* \section install_sec Tast2
+* -Task2
+* 
+* -Triangle
+* 
+* -Quadrilateral
+* 
+* -Pentagon
+* 
+* -Circle
+* 
+* -TextChecking
+* 
+*
+* 
+*/
     /// <summary>
-    /// **Task1 class that contains tasks of part one of exercise.**
+    ///  \details  **Class that contains tasks of part one of exercise.**
     /// </summary>
     public partial class Task1 : Window
     {
@@ -12,7 +51,7 @@ namespace OOP_Lab_1
         MyList<int> listToSort = new MyList<int> { };
         SortEventHandler<int> subscribeSortMethods = new SortEventHandler<int>();
         /// <summary>
-        ///  **Initialize UI and elements**
+        ///  Initialize UI and some elements.
         /// </summary>
         public Task1()
         {
@@ -20,7 +59,7 @@ namespace OOP_Lab_1
          
         }
         /// <summary>
-        /// **Button method for adding new random elements in range (0,100) to listToSort**.
+        /// Button method for adding new random elements in range (0,100) to list.
         /// </summary>
         /// <param name="sender">The element that called the method.</param>
         /// <param name="e">Contains state information and event data associated with a routed event.</param>
@@ -36,7 +75,7 @@ namespace OOP_Lab_1
 
         }
         /// <summary>
-        /// **Button method for shuffling elements in listToSort**.
+        /// Button method for shuffling elements in the list.
         /// </summary>
         /// <param name="sender">The element that called the method.</param>
         /// <param name="e"> Contains state information and event data associated with a routed event.</param>
@@ -55,7 +94,7 @@ namespace OOP_Lab_1
             PrintList();
         }
         /// <summary>
-        /// **The function that is used to subscribe the sort methods to the sort event.**
+        /// The function that is used to subscribe the sort methods to the sort event.
         /// </summary>
         /// <param name="methodForSigning">Sort method that would be subscribed.</param>
         //function to subscribe sort methods and sort listToSort
@@ -68,7 +107,7 @@ namespace OOP_Lab_1
         }
         //print list to sort
         /// <summary>
-        /// **Method for printing list.**
+        ///Method for printing list.
         /// </summary>
         void PrintList()
         {
@@ -82,7 +121,7 @@ namespace OOP_Lab_1
             }
         }
         /// <summary>
-        /// **Button method that uses the print function.**
+        /// Button method that uses the print function.
         /// </summary>
         /// <param name="sender">The element that called the method.</param>
         /// <param name="e"> Contains state information and event data associated with a routed event.</param>
@@ -92,7 +131,7 @@ namespace OOP_Lab_1
         }
         //Different buttons that contain different sort methods 
         /// <summary>
-        /// **Button method that subscribes InsertionSort method.**
+        /// Button method that subscribes InsertionSort method on the sort event.
         /// </summary>
         /// <param name="sender">The element that called the method.</param>
         /// <param name="e"> Contains state information and event data associated with a routed event.</param>
@@ -102,7 +141,7 @@ namespace OOP_Lab_1
             SubscribeAndSort(insertion);
         }
         /// <summary>
-        /// **Button method that subscribes QuickSort method.**
+        /// Button method that subscribes QuickSort method on the sort event.
         /// </summary>
         /// <param name="sender">The element that called the method.</param>
         /// <param name="e"> Contains state information and event data associated with a routed event.</param>
@@ -112,7 +151,7 @@ namespace OOP_Lab_1
             SubscribeAndSort(quickSort);
         }
         /// <summary>
-        /// **Button method that subscribes MergeSort method.**
+        ///*Button method that subscribes MergeSort method on the sort event.
         /// </summary>
         /// <param name="sender">The element that called the method.</param>
         /// <param name="e"> Contains state information and event data associated with a routed event.</param>
@@ -122,7 +161,7 @@ namespace OOP_Lab_1
             SubscribeAndSort(mergeSort);
         }
         /// <summary>
-        ///**Button method that subscribes BubbleSort method.**
+        ///Button method that subscribes BubbleSort method on the sort event.
         /// </summary>
         /// <param name="sender">The element that called the method.</param>
         /// <param name="e"> Contains state information and event data associated with a routed event.</param>
@@ -132,7 +171,7 @@ namespace OOP_Lab_1
             SubscribeAndSort(bubbleSort);
         }
         /// <summary>
-        /// **Button method that subscribes SelectionSort method.**
+        /// Button method that subscribes SelectionSort method on the sort event.
         /// </summary>
         /// <param name="sender">The element that called the method.</param>
         /// <param name="e"> Contains state information and event data associated with a routed event.</param>
@@ -142,7 +181,7 @@ namespace OOP_Lab_1
             SubscribeAndSort(selectionSort);
         }
         /// <summary>
-        ///**Button method that subscribes CountingSort method.**
+        ///Button method that subscribes CountingSort method on the sort event.
         /// </summary>
         /// <param name="sender">The element that called the method.</param>
         /// <param name="e"> Contains state information and event data associated with a routed event.</param>
@@ -152,7 +191,7 @@ namespace OOP_Lab_1
             SubscribeAndSort(countingSort);
         }
         /// <summary>
-        /// **Button method that subscribes BucketSort method.**
+        /// Button method that subscribes BucketSort method on the sort event.
         /// </summary>
         /// <param name="sender">The element that called the method.</param>
         /// <param name="e"> Contains state information and event data associated with a routed event.</param>
@@ -162,7 +201,7 @@ namespace OOP_Lab_1
             SubscribeAndSort(bucketSort);
         }
         /// <summary>
-        /// **Button method that opens Task2 window.**
+        /// Button method that opens Task2 window.
         /// </summary>
         /// <param name="sender">The element that called the method.</param>
         /// <param name="e"> Contains state information and event data associated with a routed event.</param>
