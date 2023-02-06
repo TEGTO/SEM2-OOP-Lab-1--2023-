@@ -43,7 +43,7 @@ namespace OOP_Lab_1
 * 
 */
     /// <summary>
-    ///  \details  **Class that contains tasks of part one of exercise.**
+    ///   **Class that contains tasks of part one of the exercise.**
     /// </summary>
     public partial class Task1 : Window
     {
