@@ -3,7 +3,7 @@
 ### About the project:
  All diagrams in folder **1a** are made for the before (pre-refactoring) version of the project.
  
- The documentation in the **main** folder is made for after (refactoring) version of the project. Made by Doxygen. 
+ The documentation in the **main** folder is made for the after (refactoring) version of the project. Made by Doxygen. 
  
  The glossary located in the **main** folder. This is pdf document in Ukrainian that describes all terms that used in the diagrams.
  
@@ -15,4 +15,4 @@
  
  The use case diagram in the **1e** folder describes a film-story about a post-apocalyptic life of one person.
  
- ###### *The unit tests also are made for (refactoring) version of the project.
+ ###### *The unit tests also are made for the after (refactoring) version of the project.
