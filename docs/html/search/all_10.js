@@ -8,5 +8,6 @@ var searchData=
   ['sorting_5',['Sorting',['../a00237.html#ac246e1986b4457cfaf25ad4714cd94e2',1,'InsertionSort.Sorting()'],['../a00241.html#a8394af5697c238748dc2be7434589817',1,'QuickSort.Sorting()'],['../a00245.html#a9cee223fcc27e75a8f70874cc60e0dc3',1,'MergeSort.Sorting()'],['../a00253.html#ac246e1986b4457cfaf25ad4714cd94e2',1,'SelectionSort.Sorting()'],['../a00257.html#ac246e1986b4457cfaf25ad4714cd94e2',1,'CountingSort.Sorting()'],['../a00261.html#ac246e1986b4457cfaf25ad4714cd94e2',1,'BucketSort.Sorting()']]],
   ['sortmethod_6',['sortMethod',['../a00229.html#a2491c8d747109d24cd5a651e3c0f3c3c',1,'SortEventHandler']]],
   ['startsorting_7',['StartSorting',['../a00229.html#a3aeaa5ad0323d9b4bf377d7fe376104f',1,'SortEventHandler']]],
-  ['subscribeandsort_8',['SubscribeAndSort',['../a00209.html#a9c056b6355d3aa745d7bc86abaceb954',1,'OOP_Lab_1::Task1']]]
+  ['subscribeandsort_8',['SubscribeAndSort',['../a00209.html#a9c056b6355d3aa745d7bc86abaceb954',1,'OOP_Lab_1::Task1']]],
+  ['subscribesortmethods_9',['subscribeSortMethods',['../a00209.html#af93401c5e37c3da1e371f556346f84f0',1,'OOP_Lab_1::Task1']]]
 ];

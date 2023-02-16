@@ -6,38 +6,38 @@ namespace OOP_Lab_1
     /*! \mainpage Documentation of First OOP Lab. 
 *
 * \section intro_sec Task1
-* -Task1
+* • Task1
 * 
-* -MyList
+* • MyList
 * 
-* -SortEventHandler
+* • SortEventHandler
 * 
-* -ISortMethod
+* • ISortMethod
 * 
-* -InsertionSort
+* • InsertionSort
 * 
-* -QuickSort
+* • QuickSort
 * 
-* -MergeSort
+* • MergeSort
 * 
-* -BubbleSort
+* • BubbleSort
 * 
-* -SelectionSort
+* • SelectionSort
 * 
-* -BucketSort
+* • BucketSort
 * 
 * \section install_sec Tast2
-* -Task2
+* • Task2
 * 
-* -Triangle
+* • Triangle
 * 
-* -Quadrilateral
+* • Quadrilateral
 * 
-* -Pentagon
+* • Pentagon
 * 
-* -Circle
+* • Circle
 * 
-* -TextChecking
+* • TextChecking
 * 
 *
 * 
@@ -47,8 +47,13 @@ namespace OOP_Lab_1
     /// </summary>
     public partial class Task1 : Window
     {
-
+        /// <summary>
+        /// Main list to sort. This list are used for adding new elements, sorting by different methods.
+        /// </summary>
         MyList<int> listToSort = new MyList<int> { };
+        /// <summary>
+        /// Sort event handler. Event for containing different sort methods.
+        /// </summary>
         SortEventHandler<int> subscribeSortMethods = new SortEventHandler<int>();
         /// <summary>
         ///  Initialize UI and some elements.

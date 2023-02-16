@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['regex_0',['regex',['../a00281.html#a89768b56e80f3dde2cfa6333384dce6f',1,'OOP_Lab_1::TextChecking']]]
+  ['listtosort_0',['listToSort',['../a00209.html#abed7a2cebd3ebf678fbfe8a2cf728a6b',1,'OOP_Lab_1::Task1']]]
 ];
