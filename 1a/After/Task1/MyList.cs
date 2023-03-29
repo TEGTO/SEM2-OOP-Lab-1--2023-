@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
+namespace Task1.MyList
+{
+
 
 /// <summary>
 /// **Own list, which is used for all exercises of the first part.**
@@ -185,3 +188,4 @@ public class MyList<T> where T : IComparable
       
     }
 
+}

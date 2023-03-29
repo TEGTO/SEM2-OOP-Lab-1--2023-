@@ -1,64 +1,74 @@
-\hypertarget{a00269}{}\doxysection{Quadrilateral}
-\label{a00269}\index{Quadrilateral@{Quadrilateral}}
+\hypertarget{a00269}{}\doxysection{Quick\+Sort\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}}
+\label{a00269}\index{QuickSort$<$ T $>$@{QuickSort$<$ T $>$}}
 
 
-Static class that calculations Area, Perimeter and \mbox{\hyperlink{a00269}{Quadrilateral}} Type depending on values of sides and angles.   
+Quick sort class implements \mbox{\hyperlink{a00261}{ISort\+Method}} interface.  
 
 
-\doxysubsection*{Static Public Member Functions}
+Inheritance diagram for Quick\+Sort\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{a00269}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{a00269_aec11fb66e573e2d1c87113d0b4eeefb1}\label{a00269_aec11fb66e573e2d1c87113d0b4eeefb1}} 
-static float {\bfseries Perimeter} ()
-\item 
-static int \mbox{\hyperlink{a00269_a1ad97ad4640a11e4cf5431f3a1b6d313}{Define\+Type}} ()
-\begin{DoxyCompactList}\small\item\em Method that defines quadrilateral type.  \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{a00269_ad508964d0dd13c814216cb9a8506e91d}\label{a00269_ad508964d0dd13c814216cb9a8506e91d}} 
-static float {\bfseries Area} ()
-\end{DoxyCompactItemize}
-\doxysubsection*{Properties}
+void \mbox{\hyperlink{a00269_ae78e0f956bb9100f4b7d53d2133d258a}{Sort}} (object source, Sorting\+Event\+Args$<$ T $>$ arg)
+\begin{DoxyCompactList}\small\item\em The method that was implemented from \mbox{\hyperlink{a00261}{ISort\+Method}} interface. /details Used as way to subscribe the class on event.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{a00269_aafc1ab6a114e7253793edfc68faa41a4}\label{a00269_aafc1ab6a114e7253793edfc68faa41a4}} 
-static float {\bfseries first\+Side} = 0\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\mbox{\Hypertarget{a00269_a6af06a4557690ac5f39d3fed3c8d565a}\label{a00269_a6af06a4557690ac5f39d3fed3c8d565a}} 
+int {\bfseries Partition} (\mbox{\hyperlink{a00245}{My\+List}}$<$ T $>$ array, int min\+Index, int max\+Index)
 \item 
-\mbox{\Hypertarget{a00269_abac325095011a6d44059a3e549edb227}\label{a00269_abac325095011a6d44059a3e549edb227}} 
-static float {\bfseries second\+Side} = 0\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
-\mbox{\Hypertarget{a00269_ad294742909bfeb33a0d0e5adcda92c04}\label{a00269_ad294742909bfeb33a0d0e5adcda92c04}} 
-static float {\bfseries third\+Side} = 0\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
-\mbox{\Hypertarget{a00269_a1d04a3f37a2c23cc7284c6210dd0f2b1}\label{a00269_a1d04a3f37a2c23cc7284c6210dd0f2b1}} 
-static float {\bfseries fourth\+Side} = 0\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
-\mbox{\Hypertarget{a00269_ac22ace88ec25e290b67ee827cfe6d447}\label{a00269_ac22ace88ec25e290b67ee827cfe6d447}} 
-static float {\bfseries first\+Angle} = 0\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
-\mbox{\Hypertarget{a00269_a36c11b02ef9cc4d41907668ca4396951}\label{a00269_a36c11b02ef9cc4d41907668ca4396951}} 
-static float {\bfseries second\+Angle} = 0\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
-\mbox{\Hypertarget{a00269_a2b724a6fb4788fd634baff6d182fb9f7}\label{a00269_a2b724a6fb4788fd634baff6d182fb9f7}} 
-static float {\bfseries third\+Angle} = 0\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
-\mbox{\Hypertarget{a00269_aa2f0a50da33fc381b33c8bed45fe06c3}\label{a00269_aa2f0a50da33fc381b33c8bed45fe06c3}} 
-static float {\bfseries fourth\+Angle} = 0\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{a00245}{My\+List}}$<$ T $>$ \mbox{\hyperlink{a00269_a8394af5697c238748dc2be7434589817}{Sorting}} (\mbox{\hyperlink{a00245}{My\+List}}$<$ T $>$ array, int min\+Index, int max\+Index)
+\begin{DoxyCompactList}\small\item\em Method for sorting a list.  \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Static class that calculations Area, Perimeter and \mbox{\hyperlink{a00269}{Quadrilateral}} Type depending on values of sides and angles.  
+Quick sort class implements \mbox{\hyperlink{a00261}{ISort\+Method}} interface. 
+
+Contains quick method for sorting.  \begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em IComparable}]\end{description}
+\end{Desc}
+
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{a00269_a1ad97ad4640a11e4cf5431f3a1b6d313}\label{a00269_a1ad97ad4640a11e4cf5431f3a1b6d313}} 
-\index{Quadrilateral@{Quadrilateral}!DefineType@{DefineType}}
-\index{DefineType@{DefineType}!Quadrilateral@{Quadrilateral}}
-\doxysubsubsection{\texorpdfstring{DefineType()}{DefineType()}}
-{\footnotesize\ttfamily static int Define\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\mbox{\Hypertarget{a00269_ae78e0f956bb9100f4b7d53d2133d258a}\label{a00269_ae78e0f956bb9100f4b7d53d2133d258a}} 
+\index{QuickSort$<$ T $>$@{QuickSort$<$ T $>$}!Sort@{Sort}}
+\index{Sort@{Sort}!QuickSort$<$ T $>$@{QuickSort$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Sort()}{Sort()}}
+{\footnotesize\ttfamily void Sort (\begin{DoxyParamCaption}\item[{object}]{source,  }\item[{Sorting\+Event\+Args$<$ T $>$}]{arg }\end{DoxyParamCaption})}
 
 
 
-Method that defines quadrilateral type.  
+The method that was implemented from \mbox{\hyperlink{a00261}{ISort\+Method}} interface. /details Used as way to subscribe the class on event.  
 
-\begin{DoxyReturn}{Returns}
-Type of quadrilateral in quadrilateral enum.
-\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em source} & The element that called the method.\\
+\hline
+{\em arg} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{a00261_ae78e0f956bb9100f4b7d53d2133d258a}{ISort\+Method$<$ T $>$}}.
+
+\mbox{\Hypertarget{a00269_a8394af5697c238748dc2be7434589817}\label{a00269_a8394af5697c238748dc2be7434589817}} 
+\index{QuickSort$<$ T $>$@{QuickSort$<$ T $>$}!Sorting@{Sorting}}
+\index{Sorting@{Sorting}!QuickSort$<$ T $>$@{QuickSort$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Sorting()}{Sorting()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00245}{My\+List}}$<$ T $>$ Sorting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00245}{My\+List}}$<$ T $>$}]{array,  }\item[{int}]{min\+Index,  }\item[{int}]{max\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Method for sorting a list.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & List that will be sorted.\\
+\hline
+\end{DoxyParams}

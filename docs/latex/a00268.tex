@@ -1,0 +1,74 @@
+\hypertarget{a00268}{}\doxysection{Quick\+Sort\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}}
+\label{a00268}\index{QuickSort$<$ T $>$@{QuickSort$<$ T $>$}}
+
+
+Quick sort class implements \mbox{\hyperlink{a00260}{ISort\+Method}} interface.  
+
+
+Inheritance diagram for Quick\+Sort\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{a00268}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{a00268_ae78e0f956bb9100f4b7d53d2133d258a}{Sort}} (object source, Sorting\+Event\+Args$<$ T $>$ arg)
+\begin{DoxyCompactList}\small\item\em The method that was implemented from \mbox{\hyperlink{a00260}{ISort\+Method}} interface. /details Used as way to subscribe the class on event.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{a00268_a6af06a4557690ac5f39d3fed3c8d565a}\label{a00268_a6af06a4557690ac5f39d3fed3c8d565a}} 
+int {\bfseries Partition} (\mbox{\hyperlink{a00244}{My\+List}}$<$ T $>$ array, int min\+Index, int max\+Index)
+\item 
+\mbox{\hyperlink{a00244}{My\+List}}$<$ T $>$ \mbox{\hyperlink{a00268_a8394af5697c238748dc2be7434589817}{Sorting}} (\mbox{\hyperlink{a00244}{My\+List}}$<$ T $>$ array, int min\+Index, int max\+Index)
+\begin{DoxyCompactList}\small\item\em Method for sorting a list.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Quick sort class implements \mbox{\hyperlink{a00260}{ISort\+Method}} interface. 
+
+Contains quick method for sorting.  \begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em IComparable}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{a00268_ae78e0f956bb9100f4b7d53d2133d258a}\label{a00268_ae78e0f956bb9100f4b7d53d2133d258a}} 
+\index{QuickSort$<$ T $>$@{QuickSort$<$ T $>$}!Sort@{Sort}}
+\index{Sort@{Sort}!QuickSort$<$ T $>$@{QuickSort$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Sort()}{Sort()}}
+{\footnotesize\ttfamily void Sort (\begin{DoxyParamCaption}\item[{object}]{source,  }\item[{Sorting\+Event\+Args$<$ T $>$}]{arg }\end{DoxyParamCaption})}
+
+
+
+The method that was implemented from \mbox{\hyperlink{a00260}{ISort\+Method}} interface. /details Used as way to subscribe the class on event.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & The element that called the method.\\
+\hline
+{\em arg} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{a00260_ae78e0f956bb9100f4b7d53d2133d258a}{ISort\+Method$<$ T $>$}}.
+
+\mbox{\Hypertarget{a00268_a8394af5697c238748dc2be7434589817}\label{a00268_a8394af5697c238748dc2be7434589817}} 
+\index{QuickSort$<$ T $>$@{QuickSort$<$ T $>$}!Sorting@{Sorting}}
+\index{Sorting@{Sorting}!QuickSort$<$ T $>$@{QuickSort$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Sorting()}{Sorting()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00244}{My\+List}}$<$ T $>$ Sorting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00244}{My\+List}}$<$ T $>$}]{array,  }\item[{int}]{min\+Index,  }\item[{int}]{max\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Method for sorting a list.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & List that will be sorted.\\
+\hline
+\end{DoxyParams}

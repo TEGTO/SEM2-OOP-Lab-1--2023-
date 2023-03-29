@@ -1,5 +1,10 @@
-﻿using System;
+﻿
+using System;
 using System.Windows;
+
+using Task1.MyList;
+using Task1.SortingMethods;
+using Task1.Invoker;
 
 namespace OOP_Lab_1
 {
@@ -8,36 +13,38 @@ namespace OOP_Lab_1
 * \section intro_sec Task1
 * • Task1
 * 
-* • MyList
+* \link Task1.MyList.MyList • MyList \endlink
 * 
-* • SortEventHandler
+*  \link Task1.Invoker.SortMethodsInvoker • SortMethodsInvoker  \endlink
 * 
-* • ISortMethod
+* \link Task1.Sorting.SortEventHandler • SortEventHandler \endlink
 * 
-* • InsertionSort
+* \link Task1.SortingMethods.ISortMethod • ISortMethod \endlink
 * 
-* • QuickSort
+* \link Task1.SortingMethods.InsertionSort • InsertionSort \endlink
 * 
-* • MergeSort
+* \link Task1.SortingMethods.QuickSort • QuickSort \endlink
 * 
-* • BubbleSort
+* \link Task1.SortingMethods.MergeSort • MergeSort \endlink
 * 
-* • SelectionSort
+* \link Task1.SortingMethods.BubbleSort • BubbleSort \endlink
 * 
-* • BucketSort
+* \link Task1.SortingMethods.SelectionSort • SelectionSort \endlink
+* 
+* \link Task1.SortingMethods.BucketSort • BucketSort \endlink
 * 
 * \section install_sec Tast2
 * • Task2
 * 
-* • Triangle
+* \link Task2.Figures.Triangle • Triangle \endlink
 * 
-* • Quadrilateral
+* \link Task2.Figures.Quadrilateral • Quadrilateral \endlink
 * 
-* • Pentagon
+* \link Task2.Figures.Pentagon • Pentagon \endlink 
 * 
-* • Circle
-* 
-* • TextChecking
+* \link Task2.Figures.Circle • Circle \endlink 
+*  
+* \link Task2.UI.TextChecking • TextChecking \endlink
 * 
 *
 * 
@@ -47,6 +54,7 @@ namespace OOP_Lab_1
     /// </summary>
     public partial class Task1 : Window
     {
+       
         /// <summary>
         /// Main list to sort. This list are used for adding new elements, sorting by different methods.
         /// </summary>
@@ -54,14 +62,15 @@ namespace OOP_Lab_1
         /// <summary>
         /// Sort event handler. Event for containing different sort methods.
         /// </summary>
-        SortEventHandler<int> subscribeSortMethods = new SortEventHandler<int>();
+        SortMethodsInvoker<int> subscribeSortMethods = new SortMethodsInvoker<int>();
         /// <summary>
         ///  Initialize UI and some elements.
         /// </summary>
         public Task1()
         {
             InitializeComponent();
-         
+            subscribeSortMethods.listToSort = listToSort;
+            subscribeSortMethods.textBox = textBox;
         }
         /// <summary>
         /// Button method for adding new random elements in range (0,100) to list.
@@ -98,18 +107,8 @@ namespace OOP_Lab_1
 
             PrintList();
         }
-        /// <summary>
-        /// The function that is used to subscribe the sort methods to the sort event.
-        /// </summary>
-        /// <param name="methodForSigning">Sort method that would be subscribed.</param>
-        //function to subscribe sort methods and sort listToSort
-        void SubscribeAndSort(ISortMethod<int> methodForSigning)
-        {
-            subscribeSortMethods.sortMethod += methodForSigning.Sort;
-            subscribeSortMethods.Sort(listToSort);
-            subscribeSortMethods.sortMethod -= methodForSigning.Sort;
-            PrintList();
-        }
+       
+        
         //print list to sort
         /// <summary>
         ///Method for printing list.
@@ -143,7 +142,7 @@ namespace OOP_Lab_1
         private void Button_InsertionSort(object sender, RoutedEventArgs e)
         {
             var insertion = new InsertionSort<int>();
-            SubscribeAndSort(insertion);
+            subscribeSortMethods.SubscribeAndSort(insertion);
         }
         /// <summary>
         /// Button method that subscribes QuickSort method on the sort event.
@@ -153,7 +152,7 @@ namespace OOP_Lab_1
         private void Button_QuickSort(object sender, RoutedEventArgs e)
         {
             var quickSort = new QuickSort<int>();
-            SubscribeAndSort(quickSort);
+            subscribeSortMethods.SubscribeAndSort(quickSort);
         }
         /// <summary>
         ///*Button method that subscribes MergeSort method on the sort event.
@@ -163,7 +162,7 @@ namespace OOP_Lab_1
         private void Button_MergeSort(object sender, RoutedEventArgs e)
         {
             var mergeSort = new MergeSort<int>();
-            SubscribeAndSort(mergeSort);
+            subscribeSortMethods.SubscribeAndSort(mergeSort);
         }
         /// <summary>
         ///Button method that subscribes BubbleSort method on the sort event.
@@ -173,7 +172,7 @@ namespace OOP_Lab_1
         private void Button_BubbleSort(object sender, RoutedEventArgs e)
         {
             var bubbleSort = new BubbleSort<int>();
-            SubscribeAndSort(bubbleSort);
+            subscribeSortMethods.SubscribeAndSort(bubbleSort);
         }
         /// <summary>
         /// Button method that subscribes SelectionSort method on the sort event.
@@ -183,7 +182,7 @@ namespace OOP_Lab_1
         private void Button_SelectionSort(object sender, RoutedEventArgs e)
         {
             var selectionSort = new SelectionSort<int>();
-            SubscribeAndSort(selectionSort);
+            subscribeSortMethods.SubscribeAndSort(selectionSort);
         }
         /// <summary>
         ///Button method that subscribes CountingSort method on the sort event.
@@ -193,7 +192,7 @@ namespace OOP_Lab_1
         private void Button_CountingSort(object sender, RoutedEventArgs e)
         {
             var countingSort = new CountingSort<int>();
-            SubscribeAndSort(countingSort);
+            subscribeSortMethods.SubscribeAndSort(countingSort);
         }
         /// <summary>
         /// Button method that subscribes BucketSort method on the sort event.
@@ -203,7 +202,7 @@ namespace OOP_Lab_1
         private void Button_BucketSort(object sender, RoutedEventArgs e)
         {
             var bucketSort = new BucketSort<int>();
-            SubscribeAndSort(bucketSort);
+            subscribeSortMethods.SubscribeAndSort(bucketSort);
         }
         /// <summary>
         /// Button method that opens Task2 window.

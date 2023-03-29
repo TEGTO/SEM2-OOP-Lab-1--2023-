@@ -1,4 +1,6 @@
 ﻿using OOP_Lab_1;
+using Task2.Figures;
+
 namespace FiguresUnitTests
 {
     public class TriangleUnitTests

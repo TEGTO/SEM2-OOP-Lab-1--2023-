@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>OOP_Lab1: Member List</title>
+<title>OOP_Lab1: SortEventHandler&lt; T &gt;</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,15 +69,84 @@ $(function() {
 
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">BubbleSort&lt; T &gt; Member List</div></div>
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#events">Events</a> &#124;
+<a href="a00243.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">SortEventHandler&lt; T &gt;</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="a00249.html">BubbleSort&lt; T &gt;</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="a00249.html#a75cc1ab97ff12a6d2534ffb5c2e5d3c7">bubbleSort</a>(MyList&lt; T &gt; arr)</td><td class="entry"><a class="el" href="a00249.html">BubbleSort&lt; T &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00249.html#ae78e0f956bb9100f4b7d53d2133d258a">Sort</a>(object source, SortingEventArgs&lt; T &gt; arg)</td><td class="entry"><a class="el" href="a00249.html">BubbleSort&lt; T &gt;</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<p>The sort class that will contain different sort subscribers.   
+ <a href="a00246.html#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ad890c907dd55795584620ac86119ad11"><td class="memItemLeft" align="right" valign="top"><a id="ad890c907dd55795584620ac86119ad11" name="ad890c907dd55795584620ac86119ad11"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Sort</b> (<a class="el" href="a00234.html">MyList</a>&lt; T &gt; list)</td></tr>
+<tr class="memdesc:ad890c907dd55795584620ac86119ad11"><td class="mdescLeft">&#160;</td><td class="mdescRight">The method for sorting <b><a class="el" href="a00234.html" title="Own list, which is used for all exercises of the first part.">MyList</a> list.</b>  <br /></td></tr>
+<tr class="separator:ad890c907dd55795584620ac86119ad11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a3aeaa5ad0323d9b4bf377d7fe376104f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00246.html#a3aeaa5ad0323d9b4bf377d7fe376104f">StartSorting</a> (<a class="el" href="a00234.html">MyList</a>&lt; T &gt; list)</td></tr>
+<tr class="memdesc:a3aeaa5ad0323d9b4bf377d7fe376104f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Protected method where the <b><a class="el" href="a00234.html" title="Own list, which is used for all exercises of the first part.">MyList</a> list</b> connects to the class.   <a href="a00246.html#a3aeaa5ad0323d9b4bf377d7fe376104f">More...</a><br /></td></tr>
+<tr class="separator:a3aeaa5ad0323d9b4bf377d7fe376104f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="events" name="events"></a>
+Events</h2></td></tr>
+<tr class="memitem:a2491c8d747109d24cd5a651e3c0f3c3c"><td class="memItemLeft" align="right" valign="top"><a id="a2491c8d747109d24cd5a651e3c0f3c3c" name="a2491c8d747109d24cd5a651e3c0f3c3c"></a>
+EventHandler&lt; SortingEventArgs&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>sortMethod</b></td></tr>
+<tr class="memdesc:a2491c8d747109d24cd5a651e3c0f3c3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event for subscribing different sort methods.  <br /></td></tr>
+<tr class="separator:a2491c8d747109d24cd5a651e3c0f3c3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >The sort class that will contain different sort subscribers.  </p>
+<div class="typeconstraint">
+<dl><dt><b>Type Constraints</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>IComparable</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a3aeaa5ad0323d9b4bf377d7fe376104f" name="a3aeaa5ad0323d9b4bf377d7fe376104f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3aeaa5ad0323d9b4bf377d7fe376104f">&#9670;&#160;</a></span>StartSorting()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void StartSorting </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00234.html">MyList</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>list</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Protected method where the <b><a class="el" href="a00234.html" title="Own list, which is used for all exercises of the first part.">MyList</a> list</b> connects to the class.  </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">list</td><td>List for sorting.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5

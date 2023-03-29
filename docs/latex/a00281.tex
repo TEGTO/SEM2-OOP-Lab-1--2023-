@@ -1,85 +1,71 @@
-\hypertarget{a00281}{}\doxysection{Text\+Checking}
-\label{a00281}\index{TextChecking@{TextChecking}}
+\hypertarget{a00281}{}\doxysection{Selection\+Sort\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}}
+\label{a00281}\index{SelectionSort$<$ T $>$@{SelectionSort$<$ T $>$}}
 
 
-Class for checking text in textboxes.  
+Selection sort class implements \mbox{\hyperlink{a00261}{ISort\+Method}} interface.  
 
 
-\doxysubsection*{Static Public Member Functions}
+Inheritance diagram for Selection\+Sort\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{a00281}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static void \mbox{\hyperlink{a00281_a06eb18a22b01d89c7c5f2a1c9d722d36}{Set\+Event\+Preview\+Text}} (Stack\+Panel stack\+Panel)
-\begin{DoxyCompactList}\small\item\em Set event to all textboxes on canvases in stack panel.  \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Static Private Member Functions}
+void \mbox{\hyperlink{a00281_ae78e0f956bb9100f4b7d53d2133d258a}{Sort}} (object source, Sorting\+Event\+Args$<$ T $>$ arg)
+\begin{DoxyCompactList}\small\item\em The method that was implemented from \mbox{\hyperlink{a00261}{ISort\+Method}} interface. /details Used as way to subscribe the class on event.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static bool \mbox{\hyperlink{a00281_ac80b4e1493a36aca9557fe58f1a63f2a}{Is\+Text\+Allowed}} (string text)
-\begin{DoxyCompactList}\small\item\em Method checks if text is allowed.  \end{DoxyCompactList}\item 
-static void \mbox{\hyperlink{a00281_a3963af37dfffe16a25f13a8fc025b12b}{Preview\+Text\+Input\+Handler}} (Object sender, Text\+Composition\+Event\+Args e)
-\begin{DoxyCompactList}\small\item\em Event that allows text in a textbox if it is correct.  \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Static Private Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{a00281_a89768b56e80f3dde2cfa6333384dce6f}\label{a00281_a89768b56e80f3dde2cfa6333384dce6f}} 
-static readonly Regex {\bfseries regex} = new Regex(\char`\"{}\mbox{[}$^\wedge$0-\/9.-\/\mbox{]}+\char`\"{})
-\begin{DoxyCompactList}\small\item\em Regex that contains allowed text. (only numbers).  \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{a00281_ac246e1986b4457cfaf25ad4714cd94e2}{Sorting}} (\mbox{\hyperlink{a00245}{My\+List}}$<$ T $>$ arr)
+\begin{DoxyCompactList}\small\item\em Method for sorting a list.  \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Class for checking text in textboxes. 
+Selection sort class implements \mbox{\hyperlink{a00261}{ISort\+Method}} interface. 
 
-Allows only numbers.  
+Contains selection method for sorting.  \begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em IComparable}]\end{description}
+\end{Desc}
+
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{a00281_ac80b4e1493a36aca9557fe58f1a63f2a}\label{a00281_ac80b4e1493a36aca9557fe58f1a63f2a}} 
-\index{TextChecking@{TextChecking}!IsTextAllowed@{IsTextAllowed}}
-\index{IsTextAllowed@{IsTextAllowed}!TextChecking@{TextChecking}}
-\doxysubsubsection{\texorpdfstring{IsTextAllowed()}{IsTextAllowed()}}
-{\footnotesize\ttfamily static bool Is\+Text\+Allowed (\begin{DoxyParamCaption}\item[{string}]{text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+\mbox{\Hypertarget{a00281_ae78e0f956bb9100f4b7d53d2133d258a}\label{a00281_ae78e0f956bb9100f4b7d53d2133d258a}} 
+\index{SelectionSort$<$ T $>$@{SelectionSort$<$ T $>$}!Sort@{Sort}}
+\index{Sort@{Sort}!SelectionSort$<$ T $>$@{SelectionSort$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Sort()}{Sort()}}
+{\footnotesize\ttfamily void Sort (\begin{DoxyParamCaption}\item[{object}]{source,  }\item[{Sorting\+Event\+Args$<$ T $>$}]{arg }\end{DoxyParamCaption})}
 
 
 
-Method checks if text is allowed.  
+The method that was implemented from \mbox{\hyperlink{a00261}{ISort\+Method}} interface. /details Used as way to subscribe the class on event.  
 
 
 \begin{DoxyParams}{Parameters}
-{\em text} & Text to checking.\\
+{\em source} & The element that called the method.\\
+\hline
+{\em arg} & \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Returns bool parameter.
-
-Returns true if text is allowed. Otherwise returns false. 
-\end{DoxyReturn}
-\mbox{\Hypertarget{a00281_a3963af37dfffe16a25f13a8fc025b12b}\label{a00281_a3963af37dfffe16a25f13a8fc025b12b}} 
-\index{TextChecking@{TextChecking}!PreviewTextInputHandler@{PreviewTextInputHandler}}
-\index{PreviewTextInputHandler@{PreviewTextInputHandler}!TextChecking@{TextChecking}}
-\doxysubsubsection{\texorpdfstring{PreviewTextInputHandler()}{PreviewTextInputHandler()}}
-{\footnotesize\ttfamily static void Preview\+Text\+Input\+Handler (\begin{DoxyParamCaption}\item[{Object}]{sender,  }\item[{Text\+Composition\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 
+Implements \mbox{\hyperlink{a00261_ae78e0f956bb9100f4b7d53d2133d258a}{ISort\+Method$<$ T $>$}}.
 
-Event that allows text in a textbox if it is correct.  
-
-
-\begin{DoxyParams}{Parameters}
-{\em sender} & The element that called the method.\\
-\hline
-{\em e} & Contains state information and event data associated with a routed event.\\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{a00281_a06eb18a22b01d89c7c5f2a1c9d722d36}\label{a00281_a06eb18a22b01d89c7c5f2a1c9d722d36}} 
-\index{TextChecking@{TextChecking}!SetEventPreviewText@{SetEventPreviewText}}
-\index{SetEventPreviewText@{SetEventPreviewText}!TextChecking@{TextChecking}}
-\doxysubsubsection{\texorpdfstring{SetEventPreviewText()}{SetEventPreviewText()}}
-{\footnotesize\ttfamily static void Set\+Event\+Preview\+Text (\begin{DoxyParamCaption}\item[{Stack\+Panel}]{stack\+Panel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\mbox{\Hypertarget{a00281_ac246e1986b4457cfaf25ad4714cd94e2}\label{a00281_ac246e1986b4457cfaf25ad4714cd94e2}} 
+\index{SelectionSort$<$ T $>$@{SelectionSort$<$ T $>$}!Sorting@{Sorting}}
+\index{Sorting@{Sorting}!SelectionSort$<$ T $>$@{SelectionSort$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Sorting()}{Sorting()}}
+{\footnotesize\ttfamily void Sorting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00245}{My\+List}}$<$ T $>$}]{arr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Set event to all textboxes on canvases in stack panel.  
+Method for sorting a list.  
 
 
 \begin{DoxyParams}{Parameters}
-{\em stack\+Panel} & \\
+{\em arr} & List that will be sorted.\\
 \hline
 \end{DoxyParams}

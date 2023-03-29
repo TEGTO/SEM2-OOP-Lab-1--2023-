@@ -1,0 +1,119 @@
+\hypertarget{a00274}{}\doxysection{Counting\+Sort\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}}
+\label{a00274}\index{CountingSort$<$ T $>$@{CountingSort$<$ T $>$}}
+
+
+Counting sort class implements \mbox{\hyperlink{a00250}{ISort\+Method}} interface. details Contains counting method for sorting.   
+
+
+Inheritance diagram for Counting\+Sort\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{a00274}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{a00274_ae78e0f956bb9100f4b7d53d2133d258a}{Sort}} (object source, Sorting\+Event\+Args$<$ T $>$ arg)
+\begin{DoxyCompactList}\small\item\em The method that was implemented from \mbox{\hyperlink{a00250}{ISort\+Method}} interface. /details Used as way to subscribe the class on event.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+T \mbox{\hyperlink{a00274_a1ae02558fd4059fbc2140d476916eb70}{Find\+Max}} (\mbox{\hyperlink{a00234}{My\+List}}$<$ T $>$ arr)
+\begin{DoxyCompactList}\small\item\em Finds max element of the list.  \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{a00274_a42cf1f894790841b0a417363d0c17419}{Find\+Min}} (\mbox{\hyperlink{a00234}{My\+List}}$<$ T $>$ arr)
+\begin{DoxyCompactList}\small\item\em Finds min element of the list.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00274_ac246e1986b4457cfaf25ad4714cd94e2}{Sorting}} (\mbox{\hyperlink{a00234}{My\+List}}$<$ T $>$ arr)
+\begin{DoxyCompactList}\small\item\em Method for sorting a list.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Counting sort class implements \mbox{\hyperlink{a00250}{ISort\+Method}} interface. details Contains counting method for sorting.  \begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em IComparable}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{a00274_a1ae02558fd4059fbc2140d476916eb70}\label{a00274_a1ae02558fd4059fbc2140d476916eb70}} 
+\index{CountingSort$<$ T $>$@{CountingSort$<$ T $>$}!FindMax@{FindMax}}
+\index{FindMax@{FindMax}!CountingSort$<$ T $>$@{CountingSort$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{FindMax()}{FindMax()}}
+{\footnotesize\ttfamily T Find\+Max (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00234}{My\+List}}$<$ T $>$}]{arr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Finds max element of the list.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & List for searching.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Throws exception if list is empty.\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{a00274_a42cf1f894790841b0a417363d0c17419}\label{a00274_a42cf1f894790841b0a417363d0c17419}} 
+\index{CountingSort$<$ T $>$@{CountingSort$<$ T $>$}!FindMin@{FindMin}}
+\index{FindMin@{FindMin}!CountingSort$<$ T $>$@{CountingSort$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{FindMin()}{FindMin()}}
+{\footnotesize\ttfamily int Find\+Min (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00234}{My\+List}}$<$ T $>$}]{arr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Finds min element of the list.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & List for searching.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Throws exception if list is empty.\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{a00274_ae78e0f956bb9100f4b7d53d2133d258a}\label{a00274_ae78e0f956bb9100f4b7d53d2133d258a}} 
+\index{CountingSort$<$ T $>$@{CountingSort$<$ T $>$}!Sort@{Sort}}
+\index{Sort@{Sort}!CountingSort$<$ T $>$@{CountingSort$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Sort()}{Sort()}}
+{\footnotesize\ttfamily void Sort (\begin{DoxyParamCaption}\item[{object}]{source,  }\item[{Sorting\+Event\+Args$<$ T $>$}]{arg }\end{DoxyParamCaption})}
+
+
+
+The method that was implemented from \mbox{\hyperlink{a00250}{ISort\+Method}} interface. /details Used as way to subscribe the class on event.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & The element that called the method.\\
+\hline
+{\em arg} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{a00250_ae78e0f956bb9100f4b7d53d2133d258a}{ISort\+Method$<$ T $>$}}.
+
+\mbox{\Hypertarget{a00274_ac246e1986b4457cfaf25ad4714cd94e2}\label{a00274_ac246e1986b4457cfaf25ad4714cd94e2}} 
+\index{CountingSort$<$ T $>$@{CountingSort$<$ T $>$}!Sorting@{Sorting}}
+\index{Sorting@{Sorting}!CountingSort$<$ T $>$@{CountingSort$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Sorting()}{Sorting()}}
+{\footnotesize\ttfamily void Sorting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00234}{My\+List}}$<$ T $>$}]{arr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Method for sorting a list.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & List that will be sorted.\\
+\hline
+\end{DoxyParams}

@@ -1,26 +1,71 @@
-\hypertarget{a00277}{}\doxysection{Circle}
-\label{a00277}\index{Circle@{Circle}}
+\hypertarget{a00277}{}\doxysection{Bubble\+Sort\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}}
+\label{a00277}\index{BubbleSort$<$ T $>$@{BubbleSort$<$ T $>$}}
 
 
-Static class that calculations Area, Perimeter depending on value of the radius.   
+Bubble sort class implements \mbox{\hyperlink{a00261}{ISort\+Method}} interface.  
 
 
-\doxysubsection*{Static Public Member Functions}
+Inheritance diagram for Bubble\+Sort\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{a00277}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{a00277_aec11fb66e573e2d1c87113d0b4eeefb1}\label{a00277_aec11fb66e573e2d1c87113d0b4eeefb1}} 
-static float {\bfseries Perimeter} ()
-\item 
-\mbox{\Hypertarget{a00277_ad508964d0dd13c814216cb9a8506e91d}\label{a00277_ad508964d0dd13c814216cb9a8506e91d}} 
-static float {\bfseries Area} ()
-\end{DoxyCompactItemize}
-\doxysubsection*{Properties}
+void \mbox{\hyperlink{a00277_ae78e0f956bb9100f4b7d53d2133d258a}{Sort}} (object source, Sorting\+Event\+Args$<$ T $>$ arg)
+\begin{DoxyCompactList}\small\item\em The method that was implemented from \mbox{\hyperlink{a00261}{ISort\+Method}} interface. /details Used as way to subscribe the class on event.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{a00277_a5050a760c11da521cd4aee6336f6529f}\label{a00277_a5050a760c11da521cd4aee6336f6529f}} 
-static float {\bfseries radius}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{a00277_a75cc1ab97ff12a6d2534ffb5c2e5d3c7}{bubble\+Sort}} (\mbox{\hyperlink{a00245}{My\+List}}$<$ T $>$ arr)
+\begin{DoxyCompactList}\small\item\em Method for sorting a list.  \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Static class that calculations Area, Perimeter depending on value of the radius.  
+Bubble sort class implements \mbox{\hyperlink{a00261}{ISort\+Method}} interface. 
+
+Contains bubble method for sorting.  \begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em IComparable}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{a00277_a75cc1ab97ff12a6d2534ffb5c2e5d3c7}\label{a00277_a75cc1ab97ff12a6d2534ffb5c2e5d3c7}} 
+\index{BubbleSort$<$ T $>$@{BubbleSort$<$ T $>$}!bubbleSort@{bubbleSort}}
+\index{bubbleSort@{bubbleSort}!BubbleSort$<$ T $>$@{BubbleSort$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{bubbleSort()}{bubbleSort()}}
+{\footnotesize\ttfamily void bubble\+Sort (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00245}{My\+List}}$<$ T $>$}]{arr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Method for sorting a list.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & List that will be sorted.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{a00277_ae78e0f956bb9100f4b7d53d2133d258a}\label{a00277_ae78e0f956bb9100f4b7d53d2133d258a}} 
+\index{BubbleSort$<$ T $>$@{BubbleSort$<$ T $>$}!Sort@{Sort}}
+\index{Sort@{Sort}!BubbleSort$<$ T $>$@{BubbleSort$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Sort()}{Sort()}}
+{\footnotesize\ttfamily void Sort (\begin{DoxyParamCaption}\item[{object}]{source,  }\item[{Sorting\+Event\+Args$<$ T $>$}]{arg }\end{DoxyParamCaption})}
+
+
+
+The method that was implemented from \mbox{\hyperlink{a00261}{ISort\+Method}} interface. /details Used as way to subscribe the class on event.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & The element that called the method.\\
+\hline
+{\em arg} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{a00261_ae78e0f956bb9100f4b7d53d2133d258a}{ISort\+Method$<$ T $>$}}.
+

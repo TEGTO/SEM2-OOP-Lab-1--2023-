@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['insertionsort_0',['InsertionSort',['../a00237.html',1,'']]],
-  ['isortmethod_1',['ISortMethod',['../a00233.html',1,'']]]
+  ['insertionsort_0',['InsertionSort',['../a00264.html',1,'Task1::SortingMethods']]],
+  ['isortmethod_1',['ISortMethod',['../a00260.html',1,'Task1::SortingMethods']]]
 ];

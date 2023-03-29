@@ -3,47 +3,54 @@
   <Class Name="OOP_Lab_1.Task1">
     <Position X="2.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IAAgACAAAAEgIAhAAAAAgAAAAEAAAAAABBECAAQEAAA=</HashCode>
+      <HashCode>IAAgACAAAAEgIAgAAAAAIAAAAAAAAAAABBECAAQEAAA=</HashCode>
       <FileName>Task1.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="OOP_Lab_1.Task2">
-    <Position X="7" Y="1.5" Width="1.5" />
+    <Position X="7.75" Y="1.75" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="OOP_Lab_1.Task2.ComboBoxFiguresIndex" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Task2.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAAAIABIAIDCAAAQAAAAAEBAAAAAIAAAAAAEAABgAI=</HashCode>
+      <HashCode>AAgAAAABAAAAgACCAEEAAAAAQAAAAAAAAAAAAQAAAAA=</HashCode>
       <FileName>Task2.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="System.Windows.Window">
+  <Class Name="System.Windows.Window" Collapsed="true">
     <Position X="1.25" Y="7" Width="1.5" />
     <TypeIdentifier />
   </Class>
-  <Class Name="System.Windows.Controls.ContentControl">
+  <Class Name="System.Windows.Controls.ContentControl" Collapsed="true">
     <Position X="3.75" Y="7.25" Width="1.5" />
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="System.Windows.Controls.Control">
+  <Class Name="System.Windows.Controls.Control" Collapsed="true">
     <Position X="6.25" Y="7" Width="1.5" />
     <TypeIdentifier />
   </Class>
-  <Class Name="System.Windows.FrameworkElement">
+  <Class Name="System.Windows.FrameworkElement" Collapsed="true">
     <Position X="9" Y="6.75" Width="1.5" />
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="System.Windows.UIElement">
+  <Class Name="System.Windows.UIElement" Collapsed="true">
     <Position X="11.5" Y="5.5" Width="1.5" />
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="System.Windows.Media.Visual">
+  <Class Name="System.Windows.Media.Visual" Collapsed="true">
     <Position X="14.5" Y="4.75" Width="1.5" />
     <TypeIdentifier />
   </Class>
-  <Class Name="System.Windows.DependencyObject">
+  <Class Name="System.Windows.DependencyObject" Collapsed="true">
     <Position X="16.75" Y="4.5" Width="1.5" />
     <TypeIdentifier />
   </Class>
@@ -51,12 +58,16 @@
     <Position X="12.5" Y="1.75" Width="1.5" />
     <TypeIdentifier />
   </Class>
-  <Enum Name="OOP_Lab_1.CheckBoxTypes">
-    <Position X="8.75" Y="1.25" Width="1.5" />
+  <Class Name="Task2.UI.TextChecking">
+    <Position X="5" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAAABAAAAAgAAAAgAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Task2.xaml.cs</FileName>
+      <HashCode>AAAAAAAAgAAAAAAAAAQAAAAAAAAAEAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Task2\UI.cs</FileName>
     </TypeIdentifier>
-  </Enum>
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

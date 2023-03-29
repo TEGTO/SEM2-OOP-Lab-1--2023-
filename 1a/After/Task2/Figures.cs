@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Linq;
 
+namespace Task2.Figures
+{
+
+
 /// <summary>
 /// Enum of triangle types.
 /// </summary>
@@ -353,4 +357,5 @@ public static class Circle
             throw new Exception();
         return (float)(Math.PI * Math.Pow(radius, 2));
     }
+}
 }

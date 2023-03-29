@@ -1,0 +1,71 @@
+\hypertarget{a00254}{}\doxysection{Insertion\+Sort\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}}
+\label{a00254}\index{InsertionSort$<$ T $>$@{InsertionSort$<$ T $>$}}
+
+
+Insertion sort class implements \mbox{\hyperlink{a00250}{ISort\+Method}} interface.  
+
+
+Inheritance diagram for Insertion\+Sort\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{a00254}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{a00254_ae78e0f956bb9100f4b7d53d2133d258a}{Sort}} (object source, Sorting\+Event\+Args$<$ T $>$ arg)
+\begin{DoxyCompactList}\small\item\em The method that was implemented from \mbox{\hyperlink{a00250}{ISort\+Method}} interface. /details Used as way to subscribe the class on event.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{a00254_ac246e1986b4457cfaf25ad4714cd94e2}{Sorting}} (\mbox{\hyperlink{a00234}{My\+List}}$<$ T $>$ arr)
+\begin{DoxyCompactList}\small\item\em Method for sorting a list.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Insertion sort class implements \mbox{\hyperlink{a00250}{ISort\+Method}} interface. 
+
+Contains insertion method for sorting.  \begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em IComparable}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{a00254_ae78e0f956bb9100f4b7d53d2133d258a}\label{a00254_ae78e0f956bb9100f4b7d53d2133d258a}} 
+\index{InsertionSort$<$ T $>$@{InsertionSort$<$ T $>$}!Sort@{Sort}}
+\index{Sort@{Sort}!InsertionSort$<$ T $>$@{InsertionSort$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Sort()}{Sort()}}
+{\footnotesize\ttfamily void Sort (\begin{DoxyParamCaption}\item[{object}]{source,  }\item[{Sorting\+Event\+Args$<$ T $>$}]{arg }\end{DoxyParamCaption})}
+
+
+
+The method that was implemented from \mbox{\hyperlink{a00250}{ISort\+Method}} interface. /details Used as way to subscribe the class on event.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & The element that called the method.\\
+\hline
+{\em arg} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{a00250_ae78e0f956bb9100f4b7d53d2133d258a}{ISort\+Method$<$ T $>$}}.
+
+\mbox{\Hypertarget{a00254_ac246e1986b4457cfaf25ad4714cd94e2}\label{a00254_ac246e1986b4457cfaf25ad4714cd94e2}} 
+\index{InsertionSort$<$ T $>$@{InsertionSort$<$ T $>$}!Sorting@{Sorting}}
+\index{Sorting@{Sorting}!InsertionSort$<$ T $>$@{InsertionSort$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Sorting()}{Sorting()}}
+{\footnotesize\ttfamily void Sorting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00234}{My\+List}}$<$ T $>$}]{arr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Method for sorting a list.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & List that will be sorted.\\
+\hline
+\end{DoxyParams}

@@ -1,5 +1,11 @@
 ﻿using OOP_Lab_1;
 using System;
+using Task1.MyList;
+
+namespace Task1.Sorting
+{
+
+
 public class SortingEventArgs<T> : EventArgs where T : IComparable
 {
     public MyList<T> myList;
@@ -36,3 +42,4 @@ public class SortEventHandler<T> where T : IComparable
         }
 }
 
+}

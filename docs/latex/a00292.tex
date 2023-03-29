@@ -1,0 +1,55 @@
+\hypertarget{a00292}{}\doxysection{Sort\+Methods\+Invoker\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}}
+\label{a00292}\index{SortMethodsInvoker$<$ T $>$@{SortMethodsInvoker$<$ T $>$}}
+
+
+{\bfseries{Class subscribes sort methods.}}   
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{a00292_af51737e6860b19af4bf84dd8ece8c4db}{Subscribe\+And\+Sort}} (\mbox{\hyperlink{a00260}{ISort\+Method}}$<$ T $>$ method\+For\+Signing)
+\begin{DoxyCompactList}\small\item\em The function that is used to subscribe the sort methods to the sort event.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{a00292_ac0f8ce7be50465006cc392c8e2755e92}\label{a00292_ac0f8ce7be50465006cc392c8e2755e92}} 
+\mbox{\hyperlink{a00244}{My\+List}}$<$ T $>$ {\bfseries list\+To\+Sort}
+\begin{DoxyCompactList}\small\item\em List to sort. This list are used for adding new elements, sorting by different methods.  \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{a00292_ac86406e8024c2cd301ddbc8cbbafff71}\label{a00292_ac86406e8024c2cd301ddbc8cbbafff71}} 
+\mbox{\hyperlink{a00256}{Sort\+Event\+Handler}}$<$ T $>$ {\bfseries subscribe\+Sort\+Methods} = new \mbox{\hyperlink{a00256}{Sort\+Event\+Handler}}$<$T$>$()
+\begin{DoxyCompactList}\small\item\em Sort event handler. Event for containing different sort methods.  \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{a00292_a0a2d4e883fc7cddc7bd935cb56fb6d21}\label{a00292_a0a2d4e883fc7cddc7bd935cb56fb6d21}} 
+Text\+Box {\bfseries text\+Box}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{a00292_a506180eef240e45da12b5e3ec063d899}\label{a00292_a506180eef240e45da12b5e3ec063d899}} 
+void {\bfseries Print\+List} ()
+\begin{DoxyCompactList}\small\item\em Method for printing list.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+{\bfseries{Class subscribes sort methods.}}  \begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em IComparable}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{a00292_af51737e6860b19af4bf84dd8ece8c4db}\label{a00292_af51737e6860b19af4bf84dd8ece8c4db}} 
+\index{SortMethodsInvoker$<$ T $>$@{SortMethodsInvoker$<$ T $>$}!SubscribeAndSort@{SubscribeAndSort}}
+\index{SubscribeAndSort@{SubscribeAndSort}!SortMethodsInvoker$<$ T $>$@{SortMethodsInvoker$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SubscribeAndSort()}{SubscribeAndSort()}}
+{\footnotesize\ttfamily void Subscribe\+And\+Sort (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00260}{ISort\+Method}}$<$ T $>$}]{method\+For\+Signing }\end{DoxyParamCaption})}
+
+
+
+The function that is used to subscribe the sort methods to the sort event.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em method\+For\+Signing} & Sort method that would be subscribed.\\
+\hline
+\end{DoxyParams}

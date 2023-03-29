@@ -2,6 +2,8 @@
 using System;
 using System.Windows;
 using System.Windows.Controls;
+using Task2.Figures;
+using Task2.UI;
 
 namespace OOP_Lab_1
 {

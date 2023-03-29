@@ -1,0 +1,85 @@
+\hypertarget{a00312}{}\doxysection{Text\+Checking}
+\label{a00312}\index{TextChecking@{TextChecking}}
+
+
+Class for checking text in textboxes.  
+
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{a00312_a06eb18a22b01d89c7c5f2a1c9d722d36}{Set\+Event\+Preview\+Text}} (Stack\+Panel stack\+Panel)
+\begin{DoxyCompactList}\small\item\em Set event to all textboxes on canvases in stack panel.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{a00312_ac80b4e1493a36aca9557fe58f1a63f2a}{Is\+Text\+Allowed}} (string text)
+\begin{DoxyCompactList}\small\item\em Method checks if text is allowed.  \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{a00312_a3963af37dfffe16a25f13a8fc025b12b}{Preview\+Text\+Input\+Handler}} (Object sender, Text\+Composition\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Event that allows text in a textbox if it is correct.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{a00312_a89768b56e80f3dde2cfa6333384dce6f}\label{a00312_a89768b56e80f3dde2cfa6333384dce6f}} 
+static readonly Regex {\bfseries regex} = new Regex(\char`\"{}\mbox{[}$^\wedge$0-\/9.-\/\mbox{]}+\char`\"{})
+\begin{DoxyCompactList}\small\item\em Regex that contains allowed text. (only numbers).  \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for checking text in textboxes. 
+
+Allows only numbers.  
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{a00312_ac80b4e1493a36aca9557fe58f1a63f2a}\label{a00312_ac80b4e1493a36aca9557fe58f1a63f2a}} 
+\index{TextChecking@{TextChecking}!IsTextAllowed@{IsTextAllowed}}
+\index{IsTextAllowed@{IsTextAllowed}!TextChecking@{TextChecking}}
+\doxysubsubsection{\texorpdfstring{IsTextAllowed()}{IsTextAllowed()}}
+{\footnotesize\ttfamily static bool Is\+Text\+Allowed (\begin{DoxyParamCaption}\item[{string}]{text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Method checks if text is allowed.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & Text to checking.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns bool parameter.
+
+Returns true if text is allowed. Otherwise returns false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00312_a3963af37dfffe16a25f13a8fc025b12b}\label{a00312_a3963af37dfffe16a25f13a8fc025b12b}} 
+\index{TextChecking@{TextChecking}!PreviewTextInputHandler@{PreviewTextInputHandler}}
+\index{PreviewTextInputHandler@{PreviewTextInputHandler}!TextChecking@{TextChecking}}
+\doxysubsubsection{\texorpdfstring{PreviewTextInputHandler()}{PreviewTextInputHandler()}}
+{\footnotesize\ttfamily static void Preview\+Text\+Input\+Handler (\begin{DoxyParamCaption}\item[{Object}]{sender,  }\item[{Text\+Composition\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Event that allows text in a textbox if it is correct.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & The element that called the method.\\
+\hline
+{\em e} & Contains state information and event data associated with a routed event.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{a00312_a06eb18a22b01d89c7c5f2a1c9d722d36}\label{a00312_a06eb18a22b01d89c7c5f2a1c9d722d36}} 
+\index{TextChecking@{TextChecking}!SetEventPreviewText@{SetEventPreviewText}}
+\index{SetEventPreviewText@{SetEventPreviewText}!TextChecking@{TextChecking}}
+\doxysubsubsection{\texorpdfstring{SetEventPreviewText()}{SetEventPreviewText()}}
+{\footnotesize\ttfamily static void Set\+Event\+Preview\+Text (\begin{DoxyParamCaption}\item[{Stack\+Panel}]{stack\+Panel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set event to all textboxes on canvases in stack panel.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack\+Panel} & \\
+\hline
+\end{DoxyParams}

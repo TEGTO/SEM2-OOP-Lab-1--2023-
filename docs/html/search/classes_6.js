@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['quadrilateral_0',['Quadrilateral',['../a00269.html',1,'']]],
-  ['quicksort_1',['QuickSort',['../a00241.html',1,'']]]
+  ['quadrilateral_0',['Quadrilateral',['../a00300.html',1,'Task2::Figures']]],
+  ['quicksort_1',['QuickSort',['../a00268.html',1,'Task1::SortingMethods']]]
 ];

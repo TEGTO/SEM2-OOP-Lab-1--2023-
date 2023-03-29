@@ -2,12 +2,18 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Task1.MyList;
+using Task1.Sorting;
+
+namespace Task1.SortingMethods
+{
+
 
 /// <summary>
 /// **Interface of all sort classes.**
 /// </summary>
 
-interface ISortMethod<T> where T : IComparable
+public interface ISortMethod<T> where T : IComparable
 {
     /// <summary>
     /// Main sort method.
@@ -425,4 +431,5 @@ public class BucketSort<T> : ISortMethod<T> where T : IComparable
 
         Sorting(arg.myList);
     }
+}
 }

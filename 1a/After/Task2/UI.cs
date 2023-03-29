@@ -2,7 +2,7 @@
 using System.Text.RegularExpressions;
 using System.Windows.Controls;
 using System.Windows.Input;
-namespace OOP_Lab_1
+namespace Task2.UI
 {
     /// <summary>
     /// Class for checking text in textboxes. 
