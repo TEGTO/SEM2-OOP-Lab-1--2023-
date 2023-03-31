@@ -3,7 +3,7 @@
 ### About the project:
  #### All parts of the task (Lab1) are done.
  
- All diagrams in folder **1a** are made for <ins>the before (pre-refactoring) version</ins> of the project.
+ All diagrams in folder **1a** are made for <ins>the before (pre-refactoring) version</ins> (except class diagrams) of the project.
  
  The documentation in the **main** folder is made for <ins>the after (refactoring) version</ins> of the project. Made by Doxygen. 
  
